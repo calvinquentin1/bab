@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Baddiee After Baby™ — Free 60-Day Postpartum Transformation Handbook</title>
 <meta name="description" content="Book a free discovery call with Larissa Mendes and receive the 60-Day Postpartum Transformation Handbook — rebuild your body, restore your confidence, feel like yourself again.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -551,6 +552,113 @@ footer {
 
 /* ── star fill helper ── */
 .star path { fill: currentColor; }
+
+/* ══════════════════════
+   MOBILE OPTIMIZATIONS
+   ══════════════════════ */
+@media (max-width: 767px) {
+  :root { --py: clamp(44px, 10vw, 72px); }
+
+  /* Hero: everything above the fold */
+  #hero { padding-top: 68px; align-items: flex-start; }
+  .hero-body { padding: 24px 0 36px; max-width: 100%; }
+
+  .eyebrow { font-size: 9px; letter-spacing: .18em; margin-bottom: 10px; }
+
+  .hero-hl {
+    font-size: clamp(30px, 8.5vw, 42px);
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+  .hero-sub {
+    font-size: 13.5px;
+    line-height: 1.65;
+    margin-bottom: 22px;
+    max-width: 100%;
+  }
+
+  /* Full-width CTA, hide ghost button */
+  .hero-btns { flex-direction: column; gap: 0; }
+  .hero-btns .btn-rose {
+    width: 100%;
+    justify-content: center;
+    padding: 17px 20px;
+    font-size: 12.5px;
+  }
+  .hero-btns .btn-outline { display: none; }
+
+  /* Hide stats — they push CTA below fold */
+  .hero-stats { display: none; }
+
+  /* Hide decorative lines */
+  .hero-lines { display: none; }
+
+  /* Nav */
+  .nav-logo { font-size: 14px; }
+  #nav .btn { font-size: 10px; padding: 8px 13px; }
+
+  /* Cards: single column */
+  .cards { grid-template-columns: 1fr; }
+  .card { padding: 28px 24px; }
+
+  /* Steps: single column */
+  .steps { grid-template-columns: 1fr; }
+  .step { padding: 32px 24px; }
+  .step-n { font-size: 52px; }
+
+  /* Testimonials: single column */
+  .testi-grid { grid-template-columns: 1fr; gap: 16px; }
+  .testi { padding: 28px 24px; }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr; gap: 24px; }
+  .photo-ring { width: 180px; height: 180px; }
+
+  /* For-you */
+  .fy-grid { grid-template-columns: 1fr; gap: 32px; }
+  .fy-box { padding: 28px 24px; }
+
+  /* Booking */
+  .book-grid { grid-template-columns: 1fr; gap: 32px; }
+
+  /* Final CTA */
+  #final .btn-rose { width: 100%; justify-content: center; }
+
+  /* Breathing room above sticky bar */
+  body { padding-bottom: 68px; }
+}
+
+/* ── STICKY BOTTOM CTA (mobile only) ── */
+#sticky-bar {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 500;
+  background: var(--rose);
+  box-shadow: 0 -2px 20px rgba(28,23,25,.4);
+  transform: translateY(0);
+  transition: transform .3s ease;
+}
+#sticky-bar.hidden { transform: translateY(100%); }
+#sticky-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 17px 20px;
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-decoration: none;
+}
+#sticky-bar a:active { background: var(--rose-deep); }
+#sticky-bar .arr { transition: transform .18s; }
+
+@media (max-width: 767px) { #sticky-bar { display: block; } }
 </style>
 
 <!-- NAV -->
@@ -824,6 +932,11 @@ footer {
   </div>
 </section>
 
+<!-- STICKY MOBILE CTA BAR -->
+<div id="sticky-bar">
+  <a href="#form">Claim My Free Handbook <span class="arr">→</span></a>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
@@ -863,4 +976,13 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   });
 });
+
+// Sticky bar: hide when booking form is visible
+const stickyBar = document.getElementById('sticky-bar');
+const bookingSection = document.getElementById('booking');
+if (stickyBar && bookingSection) {
+  new IntersectionObserver(([e]) => {
+    stickyBar.classList.toggle('hidden', e.isIntersecting);
+  }, { threshold: 0.05 }).observe(bookingSection);
+}
 </script>
