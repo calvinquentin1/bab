@@ -559,9 +559,9 @@ footer {
 @media (max-width: 767px) {
   :root { --py: clamp(44px, 10vw, 72px); }
 
-  /* Hero: everything above the fold */
-  #hero { padding-top: 68px; align-items: flex-start; }
-  .hero-body { padding: 24px 0 36px; max-width: 100%; }
+  /* Hero: fit content, no dead space */
+  #hero { padding-top: 68px; align-items: flex-start; min-height: 0; }
+  .hero-body { padding: 24px 0 48px; max-width: 100%; }
 
   .eyebrow { font-size: 9px; letter-spacing: .18em; margin-bottom: 10px; }
 
