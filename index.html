@@ -1,0 +1,866 @@
+<title>Baddiee After Baby™ — Free 60-Day Postpartum Transformation Handbook</title>
+<meta name="description" content="Book a free discovery call with Larissa Mendes and receive the 60-Day Postpartum Transformation Handbook — rebuild your body, restore your confidence, feel like yourself again.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --rose:       #B06878;
+  --rose-deep:  #8C4A5C;
+  --rose-light: #EDD5DA;
+  --rose-pale:  #FBF3F5;
+  --cream:      #FAF6F1;
+  --gold:       #B8922A;
+  --gold-light: #E2CFA0;
+  --charcoal:   #1C1719;
+  --charcoal-2: #2A2326;
+  --text:       #2A2226;
+  --muted:      #7A6A6E;
+  --white:      #FFFFFF;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans:  'Montserrat', system-ui, sans-serif;
+  --max-w:      1100px;
+  --py:         clamp(72px, 9vw, 128px);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+
+.wrap {
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: clamp(20px, 5vw, 64px);
+}
+
+.eyebrow {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 18px;
+}
+
+/* ── FADE IN ── */
+.fi {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.fi.on { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .fi { opacity:1; transform:none; transition:none; } }
+
+/* ── BUTTONS ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 17px 36px;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background .22s, transform .18s;
+}
+.btn-rose { background: var(--rose); color: var(--white); }
+.btn-rose:hover { background: var(--rose-deep); transform: translateY(-1px); }
+.btn-outline { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,.35); }
+.btn-outline:hover { background: rgba(255,255,255,.08); }
+.btn .arr { display: inline-block; transition: transform .18s; }
+.btn:hover .arr { transform: translateX(5px); }
+
+/* ── NAV ── */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  padding: 22px 0;
+  transition: background .35s, padding .35s;
+}
+#nav.stuck {
+  background: rgba(28,23,25,.94);
+  backdrop-filter: blur(14px);
+  padding: 14px 0;
+}
+.nav-i { display:flex; align-items:center; justify-content:space-between; }
+.nav-logo {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--white);
+  letter-spacing: .01em;
+}
+.nav-logo sup { font-size: 10px; color: var(--gold-light); }
+
+/* ── HERO ── */
+#hero {
+  position: relative;
+  min-height: 100svh;
+  background: var(--charcoal);
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  overflow: hidden;
+}
+.hero-glow {
+  position: absolute; inset: 0; pointer-events: none;
+}
+.hero-glow span {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--rose);
+  filter: blur(100px);
+  opacity: .07;
+}
+.hero-glow .g1 { width: 640px; height: 640px; top: -200px; right: -120px; }
+.hero-glow .g2 { width: 420px; height: 420px; bottom: -100px; left: -80px; opacity: .05; }
+
+/* thin gold deco lines */
+.hero-lines {
+  position: absolute; top: 32%; right: 7%;
+  pointer-events: none;
+}
+.hero-lines::before {
+  content: ''; display: block;
+  width: 160px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+  opacity: .25;
+}
+.hero-lines::after {
+  content: ''; display: block;
+  width: 1px; height: 100px;
+  background: linear-gradient(180deg, var(--gold), transparent);
+  opacity: .2;
+  margin-left: auto;
+  margin-top: 0;
+}
+
+.hero-body {
+  position: relative; z-index: 2;
+  padding: var(--py) 0;
+  max-width: 840px;
+}
+.hero-hl {
+  font-family: var(--font-serif);
+  font-size: clamp(40px, 6.5vw, 80px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.07;
+  letter-spacing: -.02em;
+  text-wrap: balance;
+  margin-bottom: 30px;
+}
+.hero-hl em { font-style: italic; color: var(--rose-light); }
+.hero-hl .gw { color: var(--gold-light); }
+.hero-sub {
+  font-size: clamp(15px, 2vw, 18px);
+  color: rgba(255,255,255,.65);
+  max-width: 560px;
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 44px;
+}
+.hero-btns { display: flex; flex-wrap: wrap; gap: 14px; }
+
+.hero-stats {
+  display: flex; flex-wrap: wrap; gap: 36px;
+  margin-top: 64px;
+  padding-top: 44px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.stat-n {
+  font-family: var(--font-serif);
+  font-size: 30px;
+  color: var(--gold-light);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.stat-l {
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.4);
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+/* ── HANDBOOK ── */
+#handbook { background: var(--cream); padding: var(--py) 0; }
+.sec-h {
+  font-family: var(--font-serif);
+  font-size: clamp(30px, 4vw, 52px);
+  font-weight: 700;
+  color: var(--charcoal);
+  line-height: 1.13;
+  text-wrap: balance;
+  letter-spacing: -.01em;
+}
+.sec-h em { font-style: italic; color: var(--rose); }
+.sec-sub { margin-top: 14px; font-size: 15px; color: var(--muted); line-height: 1.8; max-width: 540px; }
+.sec-hdr { margin-bottom: clamp(48px,7vw,84px); }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+  gap: 2px;
+  background: var(--rose-light);
+  outline: 2px solid var(--rose-light);
+}
+.card {
+  background: var(--white);
+  padding: 44px 36px;
+  position: relative;
+  overflow: hidden;
+  transition: transform .25s;
+}
+.card::after {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  background: linear-gradient(90deg, var(--rose), var(--gold));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .35s ease;
+}
+.card:hover::after { transform: scaleX(1); }
+.card:hover { transform: translateY(-3px); }
+
+.c-ico {
+  width: 44px; height: 44px; margin-bottom: 22px;
+  stroke: var(--rose); fill: none; stroke-width: 1.4;
+  stroke-linecap: round; stroke-linejoin: round;
+  overflow: visible;
+}
+.c-name {
+  font-family: var(--font-serif);
+  font-size: 19px; font-weight: 700;
+  color: var(--charcoal);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.c-desc { font-size: 13.5px; color: var(--muted); line-height: 1.75; }
+.c-tag {
+  display: inline-block; margin-top: 20px;
+  font-size: 9.5px; font-weight: 700;
+  letter-spacing: .16em; text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold-light);
+  padding: 5px 12px; border-radius: 1px;
+}
+
+/* ── FOR YOU ── */
+#for-you {
+  background: var(--charcoal);
+  padding: var(--py) 0;
+  position: relative; overflow: hidden;
+}
+#for-you::before {
+  content: '"';
+  position: absolute; right: -30px; top: -60px;
+  font-family: var(--font-serif);
+  font-size: 500px; color: var(--rose);
+  opacity: .03; line-height: 1;
+  pointer-events: none; user-select: none;
+}
+.fy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px,7vw,100px);
+  align-items: start;
+}
+@media (max-width: 768px) { .fy-grid { grid-template-columns: 1fr; } }
+
+.pains { margin-top: 44px; }
+.pain {
+  display: flex; align-items: flex-start; gap: 18px;
+  padding: 26px 0;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  transition: padding-left .25s;
+}
+.pain:first-child { padding-top: 0; }
+.pain:last-child { border-bottom: none; }
+.pain:hover { padding-left: 8px; }
+.pain-i {
+  font-family: var(--font-serif);
+  font-style: italic; font-size: 12px;
+  color: var(--rose); min-width: 26px;
+  padding-top: 3px; opacity: .85;
+}
+.pain-t {
+  font-family: var(--font-serif);
+  font-size: clamp(17px,2.2vw,22px);
+  font-style: italic; font-weight: 400;
+  color: rgba(255,255,255,.88);
+  line-height: 1.45;
+}
+
+.fy-box {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.09);
+  padding: 40px;
+  margin-top: 16px;
+}
+.fy-box p {
+  font-size: 15px;
+  color: rgba(255,255,255,.6);
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+.fy-box strong { color: var(--gold-light); font-weight: 600; }
+.fy-box p:last-of-type { margin-bottom: 0; }
+
+/* ── ABOUT ── */
+#about { background: var(--cream); padding: var(--py) 0; }
+.about-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: clamp(40px,8vw,110px);
+  align-items: center;
+}
+@media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; } }
+
+.photo-col { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.photo-ring {
+  width: 270px; height: 270px;
+  border-radius: 50%;
+  background: var(--rose-light);
+  border: 4px solid var(--white);
+  box-shadow: 0 0 0 10px var(--rose-light), 0 24px 60px rgba(176,104,120,.18);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.photo-ring span {
+  font-size: 11px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--rose); text-align: center; padding: 20px;
+}
+.photo-name {
+  font-family: var(--font-serif);
+  font-style: italic; font-size: 17px;
+  color: var(--charcoal);
+}
+.photo-role {
+  font-size: 10.5px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--muted);
+  font-weight: 600;
+}
+
+.badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--rose-light);
+  color: var(--rose-deep);
+  font-size: 10px; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  padding: 7px 14px; border-radius: 100px;
+  margin-bottom: 22px;
+}
+
+.about-body p {
+  font-size: 15.5px; color: var(--text);
+  line-height: 1.9; margin-bottom: 18px;
+}
+.about-body p:last-of-type { margin-bottom: 0; }
+.about-body strong { color: var(--rose-deep); font-weight: 600; }
+
+.sig-row {
+  display: flex; align-items: center; gap: 14px;
+  margin-top: 36px; padding-top: 36px;
+  border-top: 1px solid var(--rose-light);
+}
+.sig-line { flex:1; height:1px; background: var(--rose-light); }
+.sig-name {
+  font-family: var(--font-serif);
+  font-style: italic; font-size: 24px;
+  color: var(--rose);
+}
+
+/* ── HOW IT WORKS ── */
+#how { background: var(--charcoal-2); padding: var(--py) 0; }
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2px; margin-top: 64px;
+}
+@media (max-width: 680px) { .steps { grid-template-columns: 1fr; } }
+.step {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.06);
+  padding: 48px 36px;
+  transition: background .28s;
+}
+.step:hover { background: rgba(255,255,255,.06); }
+.step-n {
+  font-family: var(--font-serif);
+  font-size: 68px; font-weight: 700;
+  color: var(--rose); opacity: .2;
+  line-height: 1; display: block; margin-bottom: 18px;
+  font-variant-numeric: tabular-nums;
+}
+.step-t {
+  font-family: var(--font-serif);
+  font-size: 21px; color: var(--white);
+  font-weight: 600; margin-bottom: 10px; line-height: 1.3;
+}
+.step-d { font-size: 13.5px; color: rgba(255,255,255,.52); line-height: 1.75; }
+.step-bar {
+  width: 38px; height: 2px;
+  background: linear-gradient(90deg, var(--rose), var(--gold));
+  margin-top: 24px; border-radius: 1px;
+}
+
+/* ── TESTIMONIALS ── */
+#testimonials { background: var(--rose-pale); padding: var(--py) 0; }
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 22px; margin-top: 56px;
+}
+.testi {
+  background: var(--white);
+  padding: 40px 36px; border-radius: 2px;
+  box-shadow: 0 4px 32px rgba(176,104,120,.08);
+  transition: box-shadow .28s, transform .28s;
+}
+.testi:hover {
+  box-shadow: 0 10px 52px rgba(176,104,120,.15);
+  transform: translateY(-4px);
+}
+.stars { display:flex; gap:4px; margin-bottom:18px; }
+.star { width:15px; height:15px; color:var(--gold); }
+.testi-q {
+  font-family: var(--font-serif);
+  font-size: 17px; font-style: italic;
+  color: var(--charcoal); line-height: 1.65;
+  margin-bottom: 26px;
+}
+.testi-q::before { content:'\201C'; }
+.testi-q::after  { content:'\201D'; }
+.testi-sep { width:28px; height:1px; background:var(--rose-light); margin-bottom:18px; }
+.testi-name { font-size:12px; font-weight:700; letter-spacing:.08em; color:var(--charcoal); text-transform:uppercase; }
+.testi-role { font-size:12px; color:var(--muted); margin-top:3px; }
+
+/* ── BOOKING ── */
+#booking { background: var(--white); padding: var(--py) 0; border-top: 1px solid var(--rose-light); }
+.book-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: clamp(40px,7vw,96px);
+  align-items: start;
+}
+@media (max-width: 780px) { .book-grid { grid-template-columns: 1fr; } }
+
+.book-left p { font-size:14.5px; color:var(--muted); line-height:1.85; margin: 20px 0 30px; }
+.perks { display:flex; flex-direction:column; gap:13px; margin-bottom:32px; }
+.perk { display:flex; align-items:flex-start; gap:11px; font-size:14px; color:var(--text); line-height:1.5; }
+.perk-dot { width:5px; height:5px; border-radius:50%; background:var(--rose); margin-top:7px; flex-shrink:0; }
+.avail { font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); font-weight:600; }
+
+.embed-box {
+  background: var(--cream);
+  border: 1px solid var(--rose-light);
+  min-height: 480px;
+  display: flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  gap:14px; padding:40px; text-align:center;
+  border-radius: 3px;
+}
+.embed-tag {
+  font-size:10px; font-weight:700;
+  letter-spacing:.2em; text-transform:uppercase;
+  color:var(--rose);
+  border:1px dashed var(--rose-light);
+  padding:7px 14px; border-radius:2px;
+}
+.embed-note { font-size:13.5px; color:var(--muted); line-height:1.7; max-width:300px; }
+.embed-code {
+  font-family:monospace; font-size:11.5px;
+  color:var(--rose); background:var(--rose-pale);
+  padding:7px 16px; border-radius:2px;
+}
+
+/* ── FINAL CTA ── */
+#final {
+  background: var(--charcoal);
+  padding: var(--py) 0;
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+#final::before {
+  content:''; position:absolute; inset:0;
+  background: radial-gradient(ellipse 80% 55% at 50% 50%, rgba(176,104,120,.17) 0%, transparent 68%);
+  pointer-events:none;
+}
+#final .wrap { position:relative; z-index:1; }
+.final-hl {
+  font-family: var(--font-serif);
+  font-size: clamp(36px,5.5vw,68px);
+  font-weight: 700; color: var(--white);
+  line-height: 1.12; letter-spacing: -.015em;
+  text-wrap: balance; margin-bottom: 18px;
+}
+.final-hl em { font-style:italic; color:var(--rose-light); }
+.final-sub {
+  font-size: clamp(14px,1.8vw,17px);
+  color: rgba(255,255,255,.58);
+  max-width: 480px; margin: 0 auto 44px;
+  line-height: 1.8;
+}
+.final-note {
+  margin-top: 26px;
+  font-size: 11px; letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--gold-light); opacity: .65;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--charcoal);
+  border-top: 1px solid rgba(255,255,255,.07);
+  padding: 48px 0;
+}
+.foot-i {
+  display:flex; flex-wrap:wrap;
+  align-items:center; justify-content:space-between;
+  gap:20px;
+}
+.foot-brand-n {
+  font-family:var(--font-serif);
+  font-style:italic; font-size:20px; color:var(--white);
+}
+.foot-tag {
+  font-size:10px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--gold);
+  font-weight:600; margin-top:5px;
+}
+.foot-disc {
+  font-size:11.5px; color:rgba(255,255,255,.28);
+  max-width:400px; line-height:1.75; text-align:right;
+}
+@media (max-width:600px) {
+  .foot-i { flex-direction:column; align-items:flex-start; }
+  .foot-disc { text-align:left; }
+}
+
+/* ── star fill helper ── */
+.star path { fill: currentColor; }
+</style>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="wrap nav-i">
+    <div class="nav-logo">Baddiee After Baby<sup>™</sup></div>
+    <a href="#form" class="btn btn-outline" style="padding:10px 22px;font-size:11px;">Book Free Call</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-glow">
+    <span class="g1"></span>
+    <span class="g2"></span>
+  </div>
+  <div class="hero-lines"></div>
+  <div class="wrap">
+    <div class="hero-body">
+      <span class="eyebrow" style="color:var(--gold-light);">Free Handbook · Free Discovery Call</span>
+      <h1 class="hero-hl">
+        Get The Free<br>
+        <em>60-Day Postpartum</em><br>
+        <span class="gw">Transformation</span> Handbook
+      </h1>
+      <p class="hero-sub">Book a free discovery call with Larissa and receive your complete guide to rebuilding your body, restoring your confidence, and feeling like yourself again — after baby.</p>
+      <div class="hero-btns">
+        <a href="#form" class="btn btn-rose">Claim My Free Handbook <span class="arr">→</span></a>
+        <a href="#about" class="btn btn-outline">Meet Larissa</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-n">200+</div><div class="stat-l">Mothers Transformed</div></div>
+        <div><div class="stat-n">60</div><div class="stat-l">Day Proven Method</div></div>
+        <div><div class="stat-n">5</div><div class="stat-l">Core Pillars</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HANDBOOK -->
+<section id="handbook">
+  <div class="wrap">
+    <div class="sec-hdr fi">
+      <span class="eyebrow">Inside Your Free Handbook</span>
+      <h2 class="sec-h">Everything You Need To <em>Rebuild</em><br>With Intention</h2>
+      <p class="sec-sub">The 60-Day Postpartum Transformation Handbook is not a generic fitness guide. It's a complete system built specifically for your postpartum body, mind, and life.</p>
+    </div>
+    <div class="cards">
+
+      <div class="card fi">
+        <svg class="c-ico" viewBox="0 0 44 44"><circle cx="22" cy="22" r="12"/><circle cx="22" cy="22" r="6"/><circle cx="22" cy="22" r="1.5" fill="var(--rose)" stroke="none"/><line x1="22" y1="10" x2="22" y2="6"/><line x1="34" y1="22" x2="38" y2="22"/><line x1="22" y1="34" x2="22" y2="38"/><line x1="10" y1="22" x2="6" y2="22"/></svg>
+        <div class="c-name">The 6-Phase Rebirth Core™ System</div>
+        <div class="c-desc">A sequenced approach to safely rebuilding your deep core from the ground up — honoring your postpartum body at every phase.</div>
+        <span class="c-tag">Phase-By-Phase</span>
+      </div>
+
+      <div class="card fi">
+        <svg class="c-ico" viewBox="0 0 44 44"><rect x="5" y="10" width="34" height="28" rx="2"/><line x1="5" y1="19" x2="39" y2="19"/><line x1="14" y1="5" x2="14" y2="14"/><line x1="30" y1="5" x2="30" y2="14"/><rect x="12" y="25" width="5" height="5" rx="1"/><rect x="24" y="25" width="5" height="5" rx="1"/></svg>
+        <div class="c-name">60-Day Progressive Workout Plan</div>
+        <div class="c-desc">Daily workouts that scale with your recovery — no guesswork, no overwhelm. A clear, purposeful plan built for real mothers.</div>
+        <span class="c-tag">Day-By-Day</span>
+      </div>
+
+      <div class="card fi">
+        <svg class="c-ico" viewBox="0 0 44 44"><path d="M22 6 C10 8 7 22 7 30 C15 30 27 28 34 20"/><path d="M34 20 C36 30 32 38 22 40 C10 38 7 30 7 30"/><line x1="22" y1="6" x2="22" y2="40"/></svg>
+        <div class="c-name">Nutrition Foundations for Postpartum Recovery</div>
+        <div class="c-desc">Hormone-aware eating principles that support healing, energy, and milk production — practical, not obsessive.</div>
+        <span class="c-tag">Hormone-Aware</span>
+      </div>
+
+      <div class="card fi">
+        <svg class="c-ico" viewBox="0 0 44 44"><rect x="4" y="28" width="6" height="12" rx="1"/><rect x="13" y="22" width="6" height="18" rx="1"/><rect x="22" y="16" width="6" height="24" rx="1"/><rect x="31" y="24" width="6" height="16" rx="1"/><line x1="2" y1="40" x2="42" y2="40"/><polyline points="7,28 16,22 25,16 34,24"/></svg>
+        <div class="c-name">The 5 Pillars of the Baddiee After Baby™ Method</div>
+        <div class="c-desc">Core, confidence, hormones, identity, and community — the five dimensions that create a lasting transformation.</div>
+        <span class="c-tag">Full-Spectrum</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- THIS IS FOR YOU -->
+<section id="for-you">
+  <div class="wrap">
+    <div class="fy-grid">
+      <div>
+        <span class="eyebrow" style="color:var(--gold-light);">Is This For You?</span>
+        <h2 class="sec-h" style="color:var(--white); margin-top:14px;">This Is <em>For You</em> If…</h2>
+        <div class="pains fi">
+          <div class="pain"><span class="pain-i">i.</span><span class="pain-t">You feel disconnected from your body after having a baby</span></div>
+          <div class="pain"><span class="pain-i">ii.</span><span class="pain-t">You've tried programs that didn't account for postpartum recovery</span></div>
+          <div class="pain"><span class="pain-i">iii.</span><span class="pain-t">You want to feel strong, confident, and like yourself again</span></div>
+          <div class="pain"><span class="pain-i">iv.</span><span class="pain-t">You're tired of being told to just "bounce back"</span></div>
+          <div class="pain"><span class="pain-i">v.</span><span class="pain-t">You're ready for a real plan built around your whole self</span></div>
+        </div>
+      </div>
+      <div class="fi">
+        <div class="fy-box">
+          <p>This is not a quick-fix program. Not a "bounce back" challenge. Not a one-size-fits-all plan that ignores your <strong>hormone changes, diastasis recti, or emotional recovery</strong>.</p>
+          <p>The Baddiee After Baby™ Method was created by a mother <strong>who lived exactly where you are right now</strong> — and found a way through, one phase at a time.</p>
+          <p>The handbook is free. The call is free. The transformation is yours to claim.</p>
+          <a href="#form" class="btn btn-rose" style="margin-top:24px;">Claim My Free Handbook <span class="arr">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="photo-col fi">
+        <div class="photo-ring"><span>Photo of<br>Larissa Mendes</span></div>
+        <div class="photo-name">Larissa Mendes</div>
+        <div class="photo-role">Founder, Baddiee After Baby™</div>
+      </div>
+      <div class="fi">
+        <span class="eyebrow">About Larissa</span>
+        <h2 class="sec-h" style="margin-top:14px; margin-bottom:22px;">Rebuilt From <em>The Inside Out</em></h2>
+        <span class="badge">★&nbsp; Postpartum Specialist &amp; Coach</span>
+        <div class="about-body">
+          <p>I'm Larissa Mendes, founder of Baddiee After Baby™. After experiencing postpartum depression, anxiety, and feeling completely disconnected from my body after having my son, I built this program from the ground up.</p>
+          <p>My mission is to help mothers <strong>rebuild — not bounce back</strong> — through a method that addresses your core, your confidence, your hormones, and your identity.</p>
+          <p>This isn't just a workout program. It's a full transformation.</p>
+        </div>
+        <div class="sig-row">
+          <div class="sig-line"></div>
+          <div class="sig-name">Larissa</div>
+          <div class="sig-line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-hdr fi">
+      <span class="eyebrow" style="color:var(--gold-light);">The Process</span>
+      <h2 class="sec-h" style="color:var(--white); margin-top:14px;">How It Works</h2>
+    </div>
+    <div class="steps">
+      <div class="step fi">
+        <span class="step-n">01</span>
+        <div class="step-t">Book Your Free Discovery Call</div>
+        <div class="step-d">Choose a time that works for you. The call is completely free, relaxed, and carries no obligation — just a conversation about where you are and where you want to go.</div>
+        <div class="step-bar"></div>
+      </div>
+      <div class="step fi">
+        <span class="step-n">02</span>
+        <div class="step-t">Receive Your Free 60-Day Handbook Instantly</div>
+        <div class="step-d">The moment your call is booked, your handbook is delivered to you. No waiting. No hoops. Immediate access to your complete 60-day roadmap.</div>
+        <div class="step-bar"></div>
+      </div>
+      <div class="step fi">
+        <span class="step-n">03</span>
+        <div class="step-t">Learn How 1-on-1 Coaching Accelerates Results</div>
+        <div class="step-d">On your call, Larissa walks you through how personalized coaching can take everything in your handbook further — faster, deeper, and with full accountability.</div>
+        <div class="step-bar"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="wrap">
+    <div class="sec-hdr fi" style="text-align:center; max-width:100%; margin-inline:auto;">
+      <span class="eyebrow">What Mothers Are Saying</span>
+      <h2 class="sec-h" style="margin-top:14px;">Real Women. <em>Real Results.</em></h2>
+    </div>
+    <div class="testi-grid">
+
+      <div class="testi fi">
+        <div class="stars">
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <div class="testi-q">I didn't think it was possible to actually feel like myself again after two kids. Larissa's method didn't just change my body — it changed how I talk to myself every single morning.</div>
+        <div class="testi-sep"></div>
+        <div class="testi-name">Sarah M.</div>
+        <div class="testi-role">Mom of 2 · 8 weeks postpartum</div>
+      </div>
+
+      <div class="testi fi">
+        <div class="stars">
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <div class="testi-q">I had diastasis and didn't know it. Every program I tried made things worse. The 6-Phase Rebirth Core™ was the first thing that actually worked with my body instead of against it.</div>
+        <div class="testi-sep"></div>
+        <div class="testi-name">Priya K.</div>
+        <div class="testi-role">First-time mom · 5 months postpartum</div>
+      </div>
+
+      <div class="testi fi">
+        <div class="stars">
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <div class="testi-q">The discovery call felt like talking to a friend who fully understood everything I was going through. I cried. And then felt hopeful for the first time in months. Start with the call — you won't regret it.</div>
+        <div class="testi-sep"></div>
+        <div class="testi-name">Monique T.</div>
+        <div class="testi-role">Mom of 3 · 10 months postpartum</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FORM / BOOKING -->
+<section id="booking">
+  <div class="wrap">
+    <div class="book-grid">
+      <div class="book-left fi">
+        <span class="eyebrow">Book Your Free Call</span>
+        <h2 class="sec-h" style="margin-top:14px;">Claim Your <em>Handbook</em> Today</h2>
+        <p>Fill in the form to book your free discovery call with Larissa. The moment your call is confirmed, your 60-Day Postpartum Transformation Handbook will be delivered to you — instantly.</p>
+        <div class="perks">
+          <div class="perk"><span class="perk-dot"></span><span>Free 30-minute discovery call with Larissa</span></div>
+          <div class="perk"><span class="perk-dot"></span><span>Instant access to the 60-Day Handbook upon booking</span></div>
+          <div class="perk"><span class="perk-dot"></span><span>No obligation, no pressure — just conversation</span></div>
+          <div class="perk"><span class="perk-dot"></span><span>Learn if 1-on-1 coaching is the right fit for you</span></div>
+        </div>
+        <div class="avail">Limited spots available each week.</div>
+      </div>
+      <div class="fi" id="form">
+        <!--
+          ╔══════════════════════════════════════════════════╗
+          ║          INSERT TYPEFORM EMBED BELOW             ║
+          ║  Replace the .embed-box div with your Typeform   ║
+          ║  embed snippet, e.g.:                            ║
+          ║  <div data-tf-live="YOUR_FORM_ID"></div>         ║
+          ║  <script src="...embed.typeform.com/..."></script>║
+          ╚══════════════════════════════════════════════════╝
+        -->
+        <div class="embed-box">
+          <span class="embed-tag">Typeform Booking Form</span>
+          <p class="embed-note">Your Typeform will appear here. Replace this div with your Typeform embed snippet.</p>
+          <div class="embed-code">&lt;!-- INSERT TYPEFORM EMBED HERE --&gt;</div>
+          <p class="embed-note" style="font-size:12px; margin-top:4px;">
+            Paste your <code style="background:var(--rose-pale);padding:2px 6px;border-radius:2px;font-size:11px;color:var(--rose);">&lt;div data-tf-live&gt;</code> snippet and the Typeform script tag here.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="final">
+  <div class="wrap">
+    <div class="fi" style="text-align:center;">
+      <span class="eyebrow" style="color:var(--gold-light);">Your Transformation Starts Here</span>
+      <h2 class="final-hl">You Deserve To Feel<br>Like <em>Yourself Again.</em></h2>
+      <p class="final-sub">Book your free call today and get the handbook that starts your transformation.</p>
+      <a href="#form" class="btn btn-rose" style="font-size:13px; padding:19px 46px;">Book My Free Call <span class="arr">→</span></a>
+      <p class="final-note">Limited spots available each week.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-i">
+      <div>
+        <div class="foot-brand-n">Baddiee After Baby™</div>
+        <div class="foot-tag">Rebuild. Reconnect. Rise.</div>
+      </div>
+      <p class="foot-disc">The discovery call is completely free with no obligation to purchase. Results may vary. Baddiee After Baby™ programs are not a substitute for medical advice. Always consult your healthcare provider before beginning any postpartum fitness program. © 2026 Baddiee After Baby™ by Larissa Mendes.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Sticky nav
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('stuck', scrollY > 40);
+window.addEventListener('scroll', onScroll, { passive: true });
+
+// Fade-in observer
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const siblings = [...e.target.parentElement.querySelectorAll('.fi')];
+    const i = siblings.indexOf(e.target);
+    e.target.style.transitionDelay = (i * 80) + 'ms';
+    e.target.classList.add('on');
+    obs.unobserve(e.target);
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fi').forEach(el => obs.observe(el));
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.getElementById(a.getAttribute('href').slice(1));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+</script>
