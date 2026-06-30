@@ -897,24 +897,14 @@ footer {
         </div>
         <div class="avail">Limited spots available each week.</div>
       </div>
-      <div class="fi" id="form">
-        <!--
-          ╔══════════════════════════════════════════════════╗
-          ║          INSERT TYPEFORM EMBED BELOW             ║
-          ║  Replace the .embed-box div with your Typeform   ║
-          ║  embed snippet, e.g.:                            ║
-          ║  <div data-tf-live="YOUR_FORM_ID"></div>         ║
-          ║  <script src="...embed.typeform.com/..."></script>║
-          ╚══════════════════════════════════════════════════╝
-        -->
-        <div class="embed-box">
-          <span class="embed-tag">Typeform Booking Form</span>
-          <p class="embed-note">Your Typeform will appear here. Replace this div with your Typeform embed snippet.</p>
-          <div class="embed-code">&lt;!-- INSERT TYPEFORM EMBED HERE --&gt;</div>
-          <p class="embed-note" style="font-size:12px; margin-top:4px;">
-            Paste your <code style="background:var(--rose-pale);padding:2px 6px;border-radius:2px;font-size:11px;color:var(--rose);">&lt;div data-tf-live&gt;</code> snippet and the Typeform script tag here.
-          </p>
-        </div>
+      <div class="fi" id="form" style="width:100%;">
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/survey/gO3uGZRr9Xwv7wzA5yIK"
+          style="border:none;width:100%;min-height:600px;display:block;"
+          scrolling="no"
+          id="gO3uGZRr9Xwv7wzA5yIK"
+          title="Book Your Free Discovery Call">
+        </iframe>
       </div>
     </div>
   </div>
@@ -987,3 +977,4 @@ if (stickyBar && bookingSection) {
   }, { threshold: 0.05 }).observe(bookingSection);
 }
 </script>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
