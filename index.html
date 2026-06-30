@@ -618,8 +618,13 @@ footer {
   .fy-grid { grid-template-columns: 1fr; gap: 32px; }
   .fy-box { padding: 28px 24px; }
 
-  /* Booking */
-  .book-grid { grid-template-columns: 1fr; gap: 32px; }
+  /* Booking: compact header, form right below */
+  .book-grid { grid-template-columns: 1fr; gap: 16px; }
+  .book-left p,
+  .book-left .perks,
+  .book-left .avail { display: none; }
+  .book-left .sec-h { font-size: clamp(26px, 7vw, 34px); margin-bottom: 0; }
+  .book-left { margin-bottom: 0; }
 
   /* Final CTA */
   #final .btn-rose { width: 100%; justify-content: center; }
