@@ -415,49 +415,21 @@ a { color: inherit; text-decoration: none; }
 .perk-dot { width:5px; height:5px; border-radius:50%; background:var(--rose); margin-top:7px; flex-shrink:0; }
 .avail { font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); font-weight:600; }
 
-.form-card {
+.book-cta-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 18px; text-align: center;
+  min-height: 320px;
   background: var(--cream);
   border: 1px solid var(--rose-light);
-  padding: clamp(28px,4vw,44px);
   border-radius: 4px;
+  padding: clamp(32px,5vw,56px);
 }
-.field { margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px; }
-.field label {
-  font-size: 11px; font-weight: 700;
-  letter-spacing: .07em; text-transform: uppercase;
-  color: var(--charcoal);
-}
-.field input, .field select, .field textarea {
-  font-family: var(--font-sans);
-  font-size: 14px; color: var(--text);
-  background: var(--white);
-  border: 1px solid var(--rose-light);
-  padding: 14px 16px; border-radius: 3px;
-  width: 100%;
-  transition: border-color .2s;
-}
-.field input:focus, .field select:focus, .field textarea:focus {
-  outline: none; border-color: var(--rose);
-}
-.field textarea { resize: vertical; min-height: 90px; font-family: var(--font-sans); }
-.field select { cursor: pointer; }
-.form-submit { width: 100%; justify-content: center; margin-top: 6px; }
+.book-cta-card .btn { width: 100%; justify-content: center; }
 .form-note {
   font-size: 11.5px; color: var(--muted);
   text-align: center; margin-top: 20px; line-height: 1.7;
-}
-
-.book-confirm { display: none; }
-.book-confirm.show { display: flex; }
-.book-confirm {
-  flex-direction: column;
-  align-items: center; justify-content: center;
-  gap: 16px; text-align: center;
-  min-height: 420px;
-  background: var(--cream);
-  border: 1px solid var(--rose-light);
-  border-radius: 4px;
-  padding: 40px;
 }
 .embed-tag {
   font-size:10px; font-weight:700;
@@ -627,7 +599,7 @@ footer {
   .book-left .avail { display: none; }
   .book-left .sec-h { font-size: clamp(26px, 7vw, 34px); margin-bottom: 0; }
   .book-left { margin-bottom: 0; }
-  .form-card { padding: 24px 20px; }
+  .book-cta-card { padding: 28px 20px; }
 
   #final .btn-rose { width: 100%; justify-content: center; }
 
@@ -659,7 +631,7 @@ footer {
   transition: transform .3s ease;
 }
 #sticky-bar.hidden { transform: translateY(100%); }
-#sticky-bar a {
+#sticky-bar button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -672,9 +644,11 @@ footer {
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--white);
-  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
-#sticky-bar a:active { background: var(--rose-deep); }
+#sticky-bar button:active { background: var(--rose-deep); }
 #sticky-bar .arr { transition: transform .18s; }
 
 @media (max-width: 767px) { #sticky-bar { display: block; } }
@@ -684,7 +658,7 @@ footer {
 <nav id="nav">
   <div class="wrap nav-i">
     <div class="nav-logo">Baddiee After Baby<sup>™</sup></div>
-    <a href="#form" class="btn btn-outline" style="padding:10px 22px;font-size:11px;">Book Free Call</a>
+    <button type="button" class="btn btn-outline open-booking-btn" style="padding:10px 22px;font-size:11px;">Book Free Call</button>
   </div>
 </nav>
 
@@ -701,7 +675,7 @@ footer {
       <h1 class="hero-hl">Finally. A Real Plan For <em>Your Postpartum Body.</em></h1>
       <p class="hero-sub">Book a free 30-minute call with Larissa and walk away with a clear picture of where your body is, what's been holding you back, and exactly what your next steps should be.</p>
       <div class="hero-btns">
-        <a href="#form" class="btn btn-rose">Book My Free Call <span class="arr">→</span></a>
+        <button type="button" class="btn btn-rose open-booking-btn">Book My Free Call <span class="arr">→</span></button>
       </div>
       <p class="hero-trust">Free. No pitch. No pressure. Just clarity.</p>
     </div>
@@ -738,7 +712,7 @@ footer {
         <div class="fy-box">
           <p>If any of this sounds like you — you are not broken, and you are not alone. Every postpartum body carries a story: the pregnancy, the birth, the hormones, the sleepless nights, the shift in who you are. Generic fitness advice was never built for that story.</p>
           <p>You don't need to push harder. You need a plan that actually understands what your body has been through — and <strong>that's exactly what the strategy call is for.</strong></p>
-          <a href="#form" class="btn btn-rose" style="margin-top:24px;">Book My Free Call <span class="arr">→</span></a>
+          <button type="button" class="btn btn-rose open-booking-btn" style="margin-top:24px;">Book My Free Call <span class="arr">→</span></button>
         </div>
       </div>
     </div>
@@ -860,14 +834,14 @@ footer {
   </div>
 </section>
 
-<!-- INTAKE FORM + BOOKING -->
+<!-- BOOKING -->
 <section id="booking">
   <div class="wrap">
     <div class="book-grid">
       <div class="book-left fi">
         <span class="eyebrow">Book Your Free Call</span>
         <h2 class="sec-h" style="margin-top:14px;">Book Your Free <em>Strategy Session</em></h2>
-        <p>Takes less than 60 seconds. Completely free. Fill in the form below and you'll be able to pick a time that works for you.</p>
+        <p>Pick a time that works for you. Takes less than 60 seconds — completely free.</p>
         <div class="perks">
           <div class="perk"><span class="perk-dot"></span><span>Free 30-minute strategy session with Larissa</span></div>
           <div class="perk"><span class="perk-dot"></span><span>No pitch, no pressure — just clarity</span></div>
@@ -877,63 +851,12 @@ footer {
         <div class="avail">Limited spots available each week.</div>
       </div>
 
-      <div class="fi" id="form" style="width:100%;">
-        <form class="form-card" id="strategy-form">
-          <div class="field">
-            <label for="fullName">Full Name</label>
-            <input type="text" id="fullName" name="fullName" required autocomplete="name">
-          </div>
-          <div class="field">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" required autocomplete="tel">
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required autocomplete="email">
-          </div>
-          <div class="field">
-            <label for="postpartumStage">How far postpartum are you?</label>
-            <select id="postpartumStage" name="postpartumStage" required>
-              <option value="" disabled selected>Select one</option>
-              <option value="0-6 weeks">0–6 weeks</option>
-              <option value="6 weeks-6 months">6 weeks–6 months</option>
-              <option value="6 months-2 years">6 months–2 years</option>
-              <option value="2+ years">2+ years</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="struggle">What's your biggest struggle right now?</label>
-            <select id="struggle" name="struggle" required>
-              <option value="" disabled selected>Select one</option>
-              <option value="Feeling disconnected from my body">Feeling disconnected from my body</option>
-              <option value="Low energy or motivation">Low energy or motivation</option>
-              <option value="Not knowing where to start">Not knowing where to start</option>
-              <option value="Confidence and how I feel about myself">Confidence and how I feel about myself</option>
-              <option value="I've tried things before but nothing has stuck">I've tried things before but nothing has stuck</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="idealOutcome">What does your ideal outcome look like 60 days from now?</label>
-            <textarea id="idealOutcome" name="idealOutcome" required></textarea>
-          </div>
-          <div class="field">
-            <label for="coachingInterest">If personalized coaching was available to help you reach your goals faster, would you be open to learning more?</label>
-            <select id="coachingInterest" name="coachingInterest" required>
-              <option value="" disabled selected>Select one</option>
-              <option value="Yes, absolutely - I'm open to it">Yes, absolutely — I'm open to it</option>
-              <option value="Maybe, it would depend on what it looks like">Maybe, it would depend on what it looks like</option>
-              <option value="No, I'm just looking for guidance right now">No, I'm just looking for guidance right now</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn-rose form-submit">Book My Free Call <span class="arr">→</span></button>
-        </form>
-
-        <div class="book-confirm" id="book-confirm">
-          <span class="embed-tag">You're Almost Done</span>
-          <p class="embed-note">Thank you! Click below to pick a time that works best for your free strategy session.</p>
-          <button type="button" class="btn btn-rose" id="open-booking-modal">Choose My Time <span class="arr">→</span></button>
+      <div class="fi" style="width:100%;">
+        <div class="book-cta-card">
+          <span class="embed-tag">30 Minutes · Free · No Obligation</span>
+          <p class="embed-note">Click below to open the scheduler and pick a time that works for your free strategy session with Larissa.</p>
+          <button type="button" class="btn btn-rose open-booking-btn">Book My Free Call <span class="arr">→</span></button>
         </div>
-
         <p class="form-note">The call is completely free with no obligation to purchase. Results may vary. Baddiee After Baby™ programs are not a substitute for medical advice.</p>
       </div>
     </div>
@@ -947,7 +870,7 @@ footer {
       <span class="eyebrow" style="color:var(--gold-light);">Your Transformation Starts Here</span>
       <h2 class="final-hl">You Deserve To Feel<br>Like <em>Yourself Again.</em></h2>
       <p class="final-sub">Book your free strategy session today. Limited spots available each week.</p>
-      <a href="#form" class="btn btn-rose" style="font-size:13px; padding:19px 46px;">Book My Free Call <span class="arr">→</span></a>
+      <button type="button" class="btn btn-rose open-booking-btn" style="font-size:13px; padding:19px 46px;">Book My Free Call <span class="arr">→</span></button>
       <p class="final-note">Limited spots available each week.</p>
     </div>
   </div>
@@ -955,7 +878,7 @@ footer {
 
 <!-- STICKY MOBILE CTA BAR -->
 <div id="sticky-bar">
-  <a href="#form">Book My Free Call <span class="arr">→</span></a>
+  <button type="button" class="open-booking-btn">Book My Free Call <span class="arr">→</span></button>
 </div>
 
 <!-- BOOKING MODAL -->
@@ -998,15 +921,7 @@ const obs = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.fi').forEach(el => obs.observe(el));
 
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const t = document.getElementById(a.getAttribute('href').slice(1));
-    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-  });
-});
-
-// Sticky bar: hide when booking form is visible
+// Sticky bar: hide when booking section is visible
 const stickyBar = document.getElementById('sticky-bar');
 const bookingSection = document.getElementById('booking');
 if (stickyBar && bookingSection) {
@@ -1015,24 +930,10 @@ if (stickyBar && bookingSection) {
   }, { threshold: 0.05 }).observe(bookingSection);
 }
 
-// Intake form -> reveal "choose your time" confirmation step
-const strategyForm = document.getElementById('strategy-form');
-const bookConfirm = document.getElementById('book-confirm');
-if (strategyForm && bookConfirm) {
-  strategyForm.addEventListener('submit', e => {
-    e.preventDefault();
-    // Optionally: send form data to your CRM/email service here before showing the booking button
-    strategyForm.style.display = 'none';
-    bookConfirm.classList.add('show');
-    bookConfirm.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-}
-
 // Booking modal (opens the LeadConnector scheduling widget as a popup)
 const bookingModalOverlay = document.getElementById('booking-modal-overlay');
 const bookingModalClose = document.getElementById('booking-modal-close');
-const openBookingModalBtn = document.getElementById('open-booking-modal');
-if (bookingModalOverlay && bookingModalClose && openBookingModalBtn) {
+if (bookingModalOverlay && bookingModalClose) {
   const openModal = () => {
     bookingModalOverlay.classList.add('show');
     document.body.classList.add('modal-open');
@@ -1041,7 +942,9 @@ if (bookingModalOverlay && bookingModalClose && openBookingModalBtn) {
     bookingModalOverlay.classList.remove('show');
     document.body.classList.remove('modal-open');
   };
-  openBookingModalBtn.addEventListener('click', openModal);
+  document.querySelectorAll('.open-booking-btn').forEach(btn => {
+    btn.addEventListener('click', openModal);
+  });
   bookingModalClose.addEventListener('click', closeModal);
   bookingModalOverlay.addEventListener('click', e => {
     if (e.target === bookingModalOverlay) closeModal();
