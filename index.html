@@ -459,7 +459,7 @@ body.modal-open { overflow: hidden; }
   overflow: hidden;
   box-shadow: 0 30px 80px rgba(0,0,0,.35);
 }
-.modal-box iframe { width: 100%; height: 100%; border: none; display: block; }
+.modal-box iframe { width: 100% !important; height: 100% !important; border: none; display: block; }
 .modal-close {
   position: absolute; top: 10px; right: 10px; z-index: 2;
   width: 36px; height: 36px;
@@ -472,9 +472,9 @@ body.modal-open { overflow: hidden; }
   cursor: pointer;
 }
 @media (max-width: 640px) {
-  .modal-overlay { padding: 0; }
-  .modal-box { max-width: 100%; width: 100vw; height: 100dvh; border-radius: 0; }
-  .modal-close { top: max(12px, env(safe-area-inset-top)); right: 12px; width: 40px; height: 40px; }
+  .modal-overlay { padding: 16px 12px; }
+  .modal-box { max-width: 100%; height: min(88dvh, 700px); border-radius: 8px; }
+  .modal-close { top: 10px; right: 10px; width: 38px; height: 38px; }
 }
 
 /* ── FINAL CTA ── */
@@ -885,7 +885,7 @@ footer {
 <div class="modal-overlay" id="booking-modal-overlay">
   <div class="modal-box">
     <button type="button" class="modal-close" id="booking-modal-close" aria-label="Close booking window">&times;</button>
-    <iframe src="https://api.leadconnectorhq.com/widget/booking/a1WmrQeKjywqnDcIbKdd" style="width:100%;border:none;overflow:hidden;" scrolling="no" id="a1WmrQeKjywqnDcIbKdd_1783474981366" title="Book Your Free Strategy Session"></iframe>
+    <iframe src="https://api.leadconnectorhq.com/widget/booking/a1WmrQeKjywqnDcIbKdd" style="width:100%;height:100%;border:none;" scrolling="yes" id="a1WmrQeKjywqnDcIbKdd_1783474981366" title="Book Your Free Strategy Session"></iframe>
   </div>
 </div>
 
