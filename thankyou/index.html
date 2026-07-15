@@ -1,0 +1,204 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Call Is Booked — Baddiee After Baby™</title>
+<meta name="description" content="Your free Postpartum Rebuild Strategy Session is booked. Check your email for the confirmation and calendar invite.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1563682655396756');
+fbq('track', 'PageView');
+fbq('track', 'Schedule');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1563682655396756&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+:root {
+  --plum:       #2D1B25;
+  --plum-card:  #38222E;
+  --cream:      #FAF7F2;
+  --ivory:      #F5EDE3;
+  --sand:       #D9C9BC;
+  --espresso:   #1C1008;
+  --gold:       #C9A96E;
+  --gold-deep:  #B8924A;
+  --blush:      #E8C4C4;
+  --white:      #FFFFFF;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans:  'Montserrat', system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-sans);
+  background: var(--plum);
+  color: var(--sand);
+  line-height: 1.7;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(24px, 5vw, 64px) 16px 0;
+  position: relative;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(201,169,110,.1) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  background: var(--plum-card);
+  border: 1px solid rgba(232,196,196,.15);
+  border-radius: 8px;
+  padding: clamp(36px, 6vw, 64px) clamp(24px, 5vw, 56px);
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(0,0,0,.3);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: rise .7s ease .1s forwards;
+}
+@keyframes rise { to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .card { opacity: 1; transform: none; animation: none; } }
+
+.check-ring {
+  width: 68px; height: 68px;
+  margin: 0 auto 28px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(201,169,110,.08);
+}
+.check-ring svg { width: 28px; height: 28px; stroke: var(--gold); stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+
+.eyebrow {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(30px, 6vw, 44px);
+  font-weight: 700;
+  color: var(--ivory);
+  line-height: 1.15;
+  letter-spacing: -.01em;
+  margin-bottom: 18px;
+}
+h1 em { font-style: italic; color: var(--gold); }
+
+.lead {
+  font-size: 15px;
+  color: var(--sand);
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(232,196,196,.15);
+  margin: 36px 0;
+}
+
+.steps { text-align: left; display: flex; flex-direction: column; gap: 26px; }
+.step { display: flex; gap: 16px; align-items: flex-start; }
+.step-n {
+  flex-shrink: 0;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: rgba(201,169,110,.14);
+  border: 1px solid rgba(201,169,110,.35);
+  color: var(--gold);
+  font-size: 12px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 2px;
+}
+.step-t {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ivory);
+  margin-bottom: 4px;
+}
+.step-d { font-size: 13.5px; color: var(--sand); line-height: 1.75; font-weight: 300; }
+
+.contact {
+  margin-top: 36px;
+  font-size: 12px;
+  color: rgba(217,201,188,.55);
+}
+
+.foot {
+  padding: 32px 16px;
+  font-size: 11px;
+  letter-spacing: .08em;
+  color: rgba(217,201,188,.4);
+  text-align: center;
+}
+.foot .tag { color: var(--gold); text-transform: uppercase; letter-spacing: .15em; font-weight: 600; }
+</style>
+
+<div class="card">
+  <div class="check-ring">
+    <svg viewBox="0 0 24 24"><polyline points="4 12.5 10 18.5 20 6.5"/></svg>
+  </div>
+  <span class="eyebrow">Booking Confirmed</span>
+  <h1>Your call is <em>booked.</em></h1>
+  <p class="lead">A confirmation has been sent to your email with the date, time, and call-in details. Check your inbox now and add it to your calendar.</p>
+
+  <div class="divider"></div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-n">1</div>
+      <div>
+        <div class="step-t">Check your email</div>
+        <div class="step-d">Your confirmation and calendar invite are on their way. Check your spam folder if you don't see it within a few minutes.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">2</div>
+      <div>
+        <div class="step-t">Accept the calendar invite</div>
+        <div class="step-d">Click accept so the call is locked into your schedule. We'll send a reminder the day before.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">3</div>
+      <div>
+        <div class="step-t">Show up exactly as you are</div>
+        <div class="step-d">No prep needed. Larissa will walk through where your body is right now, what's been holding you back, and exactly what your next steps should be. The call is 30 minutes.</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="contact">Questions before the call? Just reply to your confirmation email.</p>
+</div>
+
+<div class="foot">
+  © 2026 Baddiee After Baby™ &nbsp;·&nbsp; <span class="tag">Rebuild. Reconnect. Rise.</span>
+</div>
