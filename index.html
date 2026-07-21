@@ -125,16 +125,19 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 18px;
-  color: var(--ivory);
+  color: var(--espresso);
   letter-spacing: .01em;
+  transition: color .35s;
 }
-.nav-logo sup { font-size: 10px; color: var(--gold-light); }
+.nav-logo sup { font-size: 10px; color: var(--gold-deep); }
+#nav.stuck .nav-logo { color: var(--ivory); }
+#nav.stuck .nav-logo sup { color: var(--gold); }
 
 /* ── HERO ── */
 #hero {
   position: relative;
   min-height: 100svh;
-  background: var(--charcoal);
+  background: var(--cream);
   display: flex;
   align-items: center;
   padding-top: 80px;
@@ -146,12 +149,12 @@ a { color: inherit; text-decoration: none; }
 .hero-glow span {
   position: absolute;
   border-radius: 50%;
-  background: var(--rose);
+  background: var(--blush);
   filter: blur(100px);
-  opacity: .1;
+  opacity: .35;
 }
 .hero-glow .g1 { width: 640px; height: 640px; top: -200px; right: -120px; }
-.hero-glow .g2 { width: 420px; height: 420px; bottom: -100px; left: -80px; opacity: .07; }
+.hero-glow .g2 { width: 420px; height: 420px; bottom: -100px; left: -80px; opacity: .22; }
 
 .hero-lines {
   position: absolute; top: 32%; right: 7%;
@@ -181,16 +184,16 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--font-serif);
   font-size: clamp(40px, 6.5vw, 76px);
   font-weight: 700;
-  color: var(--ivory);
+  color: var(--espresso);
   line-height: 1.1;
   letter-spacing: -.02em;
   text-wrap: balance;
   margin-bottom: 26px;
 }
-.hero-hl em { font-style: italic; color: var(--gold); }
+.hero-hl em { font-style: italic; color: var(--gold-deep); }
 .hero-sub {
   font-size: clamp(15px, 2vw, 18px);
-  color: var(--sand);
+  color: var(--muted);
   max-width: 560px;
   line-height: 1.8;
   font-weight: 300;
@@ -201,7 +204,7 @@ a { color: inherit; text-decoration: none; }
   margin-top: 18px;
   font-size: 12px;
   letter-spacing: .04em;
-  color: var(--sand);
+  color: var(--muted);
   font-weight: 500;
 }
 
@@ -675,7 +678,7 @@ footer {
   <div class="hero-lines"></div>
   <div class="wrap">
     <div class="hero-body">
-      <span class="eyebrow" style="color:var(--gold-light);">Free Strategy Session — Limited Spots</span>
+      <span class="eyebrow" style="color:var(--gold-deep);">Free Strategy Session — Limited Spots</span>
       <h1 class="hero-hl">Finally. A Real Plan For <em>Your Postpartum Body.</em></h1>
       <p class="hero-sub">Book a free call. Walk away with a clear picture of where your body is — and exactly what to do next.</p>
       <div class="hero-btns">
