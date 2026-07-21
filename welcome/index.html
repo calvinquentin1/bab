@@ -1,0 +1,242 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Before Your Call — Baddiee After Baby™</title>
+<meta name="description" content="A personal note from Larissa Mendes before your free Postpartum Rebuild Strategy Session.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --plum:       #2D1B25;
+  --plum-card:  #38222E;
+  --cream:      #FAF7F2;
+  --ivory:      #F5EDE3;
+  --sand:       #D9C9BC;
+  --espresso:   #1C1008;
+  --brown:      #3D2B1F;
+  --gold:       #C9A96E;
+  --gold-deep:  #B8924A;
+  --blush:      #E8C4C4;
+  --white:      #FFFFFF;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans:  'Montserrat', system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-sans);
+  background: var(--plum);
+  color: var(--sand);
+  line-height: 1.7;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(24px, 5vw, 64px) 16px 0;
+  position: relative;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(201,169,110,.1) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  background: var(--plum-card);
+  border: 1px solid rgba(232,196,196,.15);
+  border-radius: 8px;
+  padding: clamp(36px, 6vw, 64px) clamp(24px, 5vw, 56px);
+  box-shadow: 0 30px 80px rgba(0,0,0,.3);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: rise .7s ease .1s forwards;
+}
+@keyframes rise { to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .card { opacity: 1; transform: none; animation: none; } }
+
+.photo-ring {
+  width: 132px; height: 132px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  background: var(--blush);
+  border: 3px solid var(--gold);
+  box-shadow: 0 0 0 8px rgba(232,196,196,.14), 0 18px 44px rgba(201,169,110,.2);
+  overflow: hidden;
+}
+.photo-ring img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+
+.eyebrow {
+  display: block;
+  text-align: center;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(26px, 5vw, 36px);
+  font-weight: 700;
+  color: var(--ivory);
+  line-height: 1.2;
+  letter-spacing: -.01em;
+  text-align: center;
+  margin-bottom: 32px;
+  text-wrap: balance;
+}
+h1 em { font-style: italic; color: var(--gold); }
+
+.note p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+.note p strong { color: var(--ivory); font-weight: 600; }
+.note .opener {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ivory);
+}
+.sig {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 24px;
+  color: var(--gold);
+  margin-top: 8px;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(232,196,196,.15);
+  margin: 36px 0;
+}
+
+h2 {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--ivory);
+  margin-bottom: 18px;
+}
+
+.covers { display: flex; flex-direction: column; gap: 13px; }
+.cover { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; font-weight: 300; line-height: 1.65; }
+.cover-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); margin-top: 9px; flex-shrink: 0; }
+
+.reflect {
+  background: rgba(201,169,110,.08);
+  border: 1px solid rgba(201,169,110,.3);
+  border-radius: 6px;
+  padding: 28px clamp(20px, 4vw, 32px);
+  text-align: center;
+  margin-top: 18px;
+}
+.reflect-q {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(18px, 3vw, 22px);
+  color: var(--gold);
+  line-height: 1.5;
+  margin: 10px 0 14px;
+}
+.reflect p { font-size: 13.5px; font-weight: 300; line-height: 1.75; }
+.reflect .lbl {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--sand); opacity: .7;
+}
+
+.who {
+  text-align: center;
+  margin-top: 36px;
+}
+.who-name {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ivory);
+}
+.who-role {
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--sand);
+  font-weight: 600;
+  margin-top: 4px;
+}
+.who-method { font-size: 11px; color: var(--gold); margin-top: 4px; letter-spacing: .06em; }
+
+.disclaimer {
+  margin-top: 32px;
+  font-size: 11.5px;
+  color: rgba(217,201,188,.55);
+  text-align: center;
+  line-height: 1.75;
+}
+
+.foot {
+  padding: 32px 16px;
+  font-size: 11px;
+  letter-spacing: .08em;
+  color: rgba(217,201,188,.4);
+  text-align: center;
+}
+.foot .tag { color: var(--gold); text-transform: uppercase; letter-spacing: .15em; font-weight: 600; }
+</style>
+
+<div class="card">
+  <div class="photo-ring"><img src="/images/larissa.jpg" alt="Larissa Mendes — Founder, Baddiee After Baby™"></div>
+  <span class="eyebrow">Before Your Call</span>
+  <h1>A short personal note <em>from Larissa</em></h1>
+
+  <div class="note">
+    <p class="opener">Hey — I'm so glad you're here.</p>
+    <p>I know it took something to book that call. Whether you've been struggling for 6 weeks or 3 years, the fact that you're here means <strong>you're ready for something different.</strong></p>
+    <p>I built Baddiee After Baby™ because I lived exactly what you're going through. After having my son, I felt completely disconnected from my body, my confidence, and honestly — myself. I tried everything and nothing worked until I stopped trying to get back to who I was and started <strong>rebuilding from where I actually was.</strong></p>
+    <p>That's what this call is about. Not a pitch. Not a sales script. Just an honest conversation about where you are and what your body actually needs.</p>
+    <p>I'll see you soon.</p>
+    <div class="sig">— Larissa</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <h2>Here's what we'll cover:</h2>
+  <div class="covers">
+    <div class="cover"><span class="cover-dot"></span><span>Where your body is right now and why it feels the way it does</span></div>
+    <div class="cover"><span class="cover-dot"></span><span>What's actually been holding you back (it's probably not what you think)</span></div>
+    <div class="cover"><span class="cover-dot"></span><span>What a real postpartum recovery plan looks like for your specific situation</span></div>
+    <div class="cover"><span class="cover-dot"></span><span>Whether 1-on-1 coaching is the right next step for you — and if it's not, we'll tell you that too</span></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <h2>Before we get on</h2>
+  <div class="reflect">
+    <span class="lbl">Take 5 minutes and think about this one question</span>
+    <p class="reflect-q">What would it mean to you to feel strong, confident, and like yourself again?</p>
+    <p>You don't need to write anything down. Just sit with it. The more honest you are with yourself on that call, the more valuable it will be.</p>
+  </div>
+
+  <div class="who">
+    <div class="who-name">Larissa Mendes</div>
+    <div class="who-role">Founder, Baddiee After Baby™</div>
+    <div class="who-method">Postpartum Coach&nbsp; | &nbsp;90-Day Transformation Method</div>
+  </div>
+
+  <p class="disclaimer">This call is completely free. There is no obligation to purchase anything. If coaching isn't the right fit, you'll still walk away with clarity on what your next steps should be.</p>
+</div>
+
+<div class="foot">
+  © 2026 Baddiee After Baby™ &nbsp;·&nbsp; <span class="tag">Rebuild. Reconnect. Rise.</span>
+</div>
