@@ -122,6 +122,39 @@ h1 em { font-style: italic; color: var(--gold); }
   margin: 36px 0;
 }
 
+.ba { margin-top: 32px; }
+.ba-lbl {
+  display: block;
+  text-align: center;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ba-item {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(232,196,196,.25);
+}
+.ba-item img {
+  width: 100%; height: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+.ba-tag {
+  position: absolute;
+  bottom: 10px; left: 10px;
+  background: rgba(28,16,8,.78);
+  color: var(--gold);
+  font-size: 10px; font-weight: 700;
+  letter-spacing: .15em; text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 3px;
+}
+
 h2 {
   font-family: var(--font-serif);
   font-size: 21px;
@@ -201,12 +234,26 @@ h2 {
   <h1>A short personal note <em>from Larissa</em></h1>
 
   <div class="note">
-    <p class="opener">Hey — I'm so glad you're here.</p>
+    <p class="opener">Hey, I'm so glad you're here.</p>
     <p>I know it took something to book that call. Whether you've been struggling for 6 weeks or 3 years, the fact that you're here means <strong>you're ready for something different.</strong></p>
-    <p>I built Baddiee After Baby because I lived exactly what you're going through. After having my son, I felt completely disconnected from my body, my confidence, and honestly — myself. I tried everything and nothing worked until I stopped trying to get back to who I was and started <strong>rebuilding from where I actually was.</strong></p>
+    <p>I built Baddiee After Baby because I lived exactly what you're going through. After having my son, I gained over 100 pounds. I felt completely disconnected from my body, my confidence, and honestly myself. I tried everything and nothing worked until I stopped trying to get back to who I was and started <strong>rebuilding from where I actually was.</strong></p>
     <p>That's what this call is about. Not a pitch. Not a sales script. Just an honest conversation about where you are and what your body actually needs.</p>
     <p>I'll see you soon.</p>
-    <div class="sig">— Larissa</div>
+    <div class="sig">Larissa</div>
+  </div>
+
+  <div class="ba">
+    <span class="ba-lbl">My Rebuild — Real, Not Retouched</span>
+    <div class="ba-grid">
+      <div class="ba-item">
+        <img src="/images/before.jpg" alt="Larissa before her postpartum rebuild">
+        <span class="ba-tag">Before</span>
+      </div>
+      <div class="ba-item">
+        <img src="/images/after.jpg" alt="Larissa after her postpartum rebuild">
+        <span class="ba-tag">After</span>
+      </div>
+    </div>
   </div>
 
   <div class="divider"></div>
