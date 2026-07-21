@@ -1,8 +1,9 @@
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Baddiee After Baby — Free Postpartum Rebuild Strategy Session</title>
 <meta name="description" content="Book a free 30-minute Postpartum Rebuild Strategy Session with Larissa Mendes. Get a clear picture of where your body is, what's been holding you back, and what to do next — no pitch, no pressure.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
 
 <!-- Meta Pixel Code -->
 <script>
@@ -24,65 +25,38 @@ src="https://www.facebook.com/tr?id=1563682655396756&ev=PageView&noscript=1"
 
 <style>
 :root {
-  --plum:       #2D1B25;  /* dark section bg */
-  --cream:      #FAF7F2;  /* light section bg */
-  --ivory:      #F5EDE3;  /* headlines on dark */
-  --sand:       #D9C9BC;  /* body text on dark */
-  --espresso:   #1C1008;  /* headlines on light, CTA text, footer/nav bg */
-  --brown:      #3D2B1F;  /* body text on light */
-  --gold:       #C9A96E;  /* CTA bg + accents */
-  --gold-deep:  #B8924A;  /* CTA hover */
-  --blush:      #E8C4C4;  /* borders, dividers, card outlines */
-  /* legacy aliases mapped onto the new palette */
-  --rose:       #C9A96E;
-  --rose-deep:  #B8924A;
-  --rose-light: #E8C4C4;
-  --rose-pale:  #FAF7F2;
-  --gold-light: #C9A96E;
-  --charcoal:   #2D1B25;
-  --charcoal-2: #2D1B25;
-  --text:       #3D2B1F;
-  --muted:      #6B5442;
-  --white:      #FFFFFF;
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans:  'Montserrat', system-ui, sans-serif;
-  --max-w:      1100px;
-  --py:         clamp(72px, 9vw, 128px);
+  --black:    #111111;
+  --text:     #1c1c1c;
+  --gray:     #555555;
+  --gray-lt:  #8a8a8a;
+  --white:    #ffffff;
+  --off:      #f8f6f3;   /* warm off-white alt sections */
+  --line:     #e9e5df;   /* hairline borders */
+  --gold:     #C9A96E;
+  --gold-deep:#B8924A;
+  --font:     'Montserrat', system-ui, sans-serif;
+  --serif:    'Playfair Display', Georgia, serif;
+  --narrow:   760px;
+  --wide:     1040px;
+  --py:       clamp(64px, 8vw, 112px);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font);
   color: var(--text);
-  background: var(--cream);
+  background: var(--white);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 a { color: inherit; text-decoration: none; }
 
-.wrap {
-  max-width: var(--max-w);
-  margin-inline: auto;
-  padding-inline: clamp(20px, 5vw, 64px);
-}
-
-.eyebrow {
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  color: var(--gold);
-  display: block;
-  margin-bottom: 18px;
-}
+.wrap   { max-width: var(--wide);   margin-inline: auto; padding-inline: clamp(20px, 5vw, 48px); }
+.narrow { max-width: var(--narrow); margin-inline: auto; padding-inline: clamp(20px, 5vw, 48px); }
 
 /* ── FADE IN ── */
-.fi {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity .65s ease, transform .65s ease;
-}
+.fi { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
 .fi.on { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .fi { opacity:1; transform:none; transition:none; } }
 
@@ -90,370 +64,329 @@ a { color: inherit; text-decoration: none; }
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  font-family: var(--font-sans);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .1em;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .06em;
   text-transform: uppercase;
-  padding: 17px 36px;
+  padding: 20px 44px;
   border: none;
   cursor: pointer;
-  border-radius: 4px;
-  transition: background .22s, transform .18s;
+  border-radius: 6px;
+  background: var(--gold);
+  color: var(--black);
+  transition: background .2s, transform .15s;
 }
-.btn-rose { background: var(--gold); color: var(--espresso); }
-.btn-rose:hover { background: var(--gold-deep); transform: translateY(-1px); }
-.btn-outline { background: var(--gold); color: var(--espresso); border: none; }
-.btn-outline:hover { background: var(--gold-deep); }
+.btn:hover { background: var(--gold-deep); transform: translateY(-1px); }
 .btn .arr { display: inline-block; transition: transform .18s; }
 .btn:hover .arr { transform: translateX(5px); }
+.btn-sm { font-size: 11px; padding: 12px 22px; }
 
 /* ── NAV ── */
 #nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-  padding: 22px 0;
-  transition: background .35s, padding .35s;
-}
-#nav.stuck {
-  background: rgba(28,16,8,.94);
-  backdrop-filter: blur(14px);
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
   padding: 14px 0;
 }
-.nav-i { display:flex; align-items:center; justify-content:space-between; }
+.nav-i { display: flex; align-items: center; justify-content: space-between; }
 .nav-logo {
-  font-family: var(--font-serif);
+  font-family: var(--serif);
   font-style: italic;
   font-size: 18px;
-  color: var(--espresso);
-  letter-spacing: .01em;
-  transition: color .35s;
+  color: var(--black);
 }
-.nav-logo sup { font-size: 10px; color: var(--gold-deep); }
-#nav.stuck .nav-logo { color: var(--ivory); }
-#nav.stuck .nav-logo sup { color: var(--gold); }
 
 /* ── HERO ── */
 #hero {
-  position: relative;
-  min-height: 100svh;
-  background: var(--cream);
-  display: flex;
-  align-items: center;
-  padding-top: 80px;
-  overflow: hidden;
+  padding: calc(72px + clamp(48px, 7vw, 80px)) 0 var(--py);
+  text-align: center;
+  background: var(--white);
 }
-.hero-glow {
-  position: absolute; inset: 0; pointer-events: none;
-}
-.hero-glow span {
-  position: absolute;
-  border-radius: 50%;
-  background: var(--blush);
-  filter: blur(100px);
-  opacity: .35;
-}
-.hero-glow .g1 { width: 640px; height: 640px; top: -200px; right: -120px; }
-.hero-glow .g2 { width: 420px; height: 420px; bottom: -100px; left: -80px; opacity: .22; }
-
-.hero-lines {
-  position: absolute; top: 32%; right: 7%;
-  pointer-events: none;
-}
-.hero-lines::before {
-  content: ''; display: block;
-  width: 160px; height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold));
-  opacity: .25;
-}
-.hero-lines::after {
-  content: ''; display: block;
-  width: 1px; height: 100px;
-  background: linear-gradient(180deg, var(--gold), transparent);
-  opacity: .2;
-  margin-left: auto;
-  margin-top: 0;
-}
-
-.hero-body {
-  position: relative; z-index: 2;
-  padding: var(--py) 0;
-  max-width: 780px;
-}
-.hero-hl {
-  font-family: var(--font-serif);
-  font-size: clamp(40px, 6.5vw, 76px);
-  font-weight: 700;
-  color: var(--espresso);
-  line-height: 1.1;
-  letter-spacing: -.02em;
-  text-wrap: balance;
-  margin-bottom: 26px;
-}
-.hero-hl em { font-style: italic; color: var(--gold-deep); }
-.hero-sub {
-  font-size: clamp(15px, 2vw, 18px);
-  color: var(--brown);
-  max-width: 560px;
-  line-height: 1.8;
-  font-weight: 400;
-  margin-bottom: 38px;
-}
-.hero-btns { display: flex; flex-wrap: wrap; gap: 14px; }
-.hero-trust {
-  margin-top: 18px;
-  font-size: 12px;
-  letter-spacing: .04em;
-  color: var(--muted);
-  font-weight: 500;
-}
-
-/* ── FOR YOU ── */
-#for-you {
-  background: var(--charcoal);
-  padding: var(--py) 0;
-  position: relative; overflow: hidden;
-}
-#for-you::before {
-  content: '"';
-  position: absolute; right: -30px; top: -60px;
-  font-family: var(--font-serif);
-  font-size: 500px; color: var(--rose);
-  opacity: .03; line-height: 1;
-  pointer-events: none; user-select: none;
-}
-.fy-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(40px,7vw,100px);
-  align-items: start;
-}
-@media (max-width: 768px) { .fy-grid { grid-template-columns: 1fr; } }
-
-.pains { margin-top: 44px; }
-.pain {
-  display: flex; align-items: flex-start; gap: 18px;
-  padding: 26px 0;
-  border-bottom: 1px solid rgba(232,196,196,.14);
-  transition: padding-left .25s;
-}
-.pain:first-child { padding-top: 0; }
-.pain:last-child { border-bottom: none; }
-.pain:hover { padding-left: 8px; }
-.pain-i {
-  font-family: var(--font-serif);
-  font-style: italic; font-size: 12px;
-  color: var(--rose); min-width: 26px;
-  padding-top: 3px; opacity: .85;
-}
-.pain-t {
-  font-family: var(--font-serif);
-  font-size: clamp(17px,2.2vw,22px);
-  font-style: italic; font-weight: 400;
-  color: var(--ivory);
-  line-height: 1.45;
-}
-
-.fy-box {
-  background: rgba(245,237,227,.04);
-  border: 1px solid rgba(232,196,196,.2);
-  padding: 40px;
-  margin-top: 16px;
-}
-.fy-box p {
-  font-size: 15px;
-  color: var(--sand);
-  line-height: 1.85;
-  margin-bottom: 20px;
-}
-.fy-box strong { color: var(--gold); font-weight: 600; }
-.fy-box p:last-of-type { margin-bottom: 0; }
-
-/* ── ABOUT ── */
-#about { background: var(--plum); padding: var(--py) 0; }
-#about .sec-h { color: var(--ivory); }
-.about-grid {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: clamp(40px,8vw,110px);
-  align-items: center;
-}
-@media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; } }
-
-.photo-col { display: flex; flex-direction: column; align-items: center; gap: 16px; }
-.photo-ring {
-  width: 270px; height: 270px;
-  border-radius: 50%;
-  background: var(--blush);
-  border: 4px solid var(--gold);
-  box-shadow: 0 0 0 10px rgba(232,196,196,.18), 0 24px 60px rgba(201,169,110,.22);
-  display: flex; align-items: center; justify-content: center;
-  overflow: hidden;
-}
-.photo-ring img { width:100%; height:100%; object-fit:cover; object-position:center top; }
-.photo-name {
-  font-family: var(--font-serif);
-  font-style: italic; font-size: 17px;
-  color: var(--ivory);
-}
-.photo-role {
-  font-size: 10.5px; letter-spacing: .14em;
-  text-transform: uppercase; color: var(--sand);
-  font-weight: 600;
-}
-
-.badge {
-  display: inline-flex; align-items: center; gap: 7px;
-  background: rgba(201,169,110,.14);
-  color: var(--gold);
-  border: 1px solid rgba(201,169,110,.35);
-  font-size: 10px; font-weight: 700;
-  letter-spacing: .12em; text-transform: uppercase;
-  padding: 7px 14px; border-radius: 100px;
+.eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
   margin-bottom: 22px;
 }
-
-.about-body p {
-  font-size: 15.5px; color: var(--sand);
-  line-height: 1.9; margin-bottom: 18px;
+.hero-hl {
+  font-size: clamp(34px, 5.6vw, 62px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--black);
+  line-height: 1.08;
+  letter-spacing: -.01em;
+  text-wrap: balance;
+  margin-bottom: 22px;
 }
-.about-body p:last-of-type { margin-bottom: 0; }
-.about-body strong { color: var(--gold); font-weight: 600; }
-
-.sig-row {
-  display: flex; align-items: center; gap: 14px;
-  margin-top: 36px; padding-top: 36px;
-  border-top: 1px solid rgba(232,196,196,.2);
+.hero-hl em {
+  font-style: normal;
+  color: var(--gold-deep);
 }
-.sig-line { flex:1; height:1px; background: rgba(232,196,196,.3); }
-.sig-name {
-  font-family: var(--font-serif);
-  font-style: italic; font-size: 24px;
+.hero-sub {
+  font-size: clamp(15px, 2vw, 18px);
+  color: var(--gray);
+  max-width: 620px;
+  margin: 0 auto 34px;
+  line-height: 1.75;
+}
+.hero-ba { max-width: 560px; margin: 44px auto 0; }
+.ba-lbl {
+  display: block;
+  text-align: center;
+  font-size: 10.5px; font-weight: 800;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 14px;
+}
+.ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ba-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: 0 16px 44px rgba(17,17,17,.1);
+}
+.ba-item img {
+  width: 100%; height: auto;
+  aspect-ratio: 39 / 50;
+  object-fit: cover;
+  display: block;
+}
+.ba-tag {
+  position: absolute;
+  bottom: 10px; left: 10px;
+  background: rgba(17,17,17,.8);
   color: var(--gold);
+  font-size: 10px; font-weight: 800;
+  letter-spacing: .15em; text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 4px;
+}
+.hero-trust {
+  margin-top: 16px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--gray-lt);
+  text-transform: uppercase;
 }
 
-/* ── WHAT HAPPENS ON THE CALL ── */
-#how { background: var(--cream); padding: var(--py) 0; }
+/* ── SECTION BASICS ── */
+.sec { padding: var(--py) 0; }
+.sec-off { background: var(--off); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.sec-h {
+  font-size: clamp(26px, 3.6vw, 42px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--black);
+  line-height: 1.12;
+  letter-spacing: -.005em;
+  text-wrap: balance;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.sec-h em { font-style: normal; color: var(--gold-deep); }
+.sec-sub {
+  font-size: 15px;
+  color: var(--gray);
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+.sec-hdr { margin-bottom: clamp(40px, 6vw, 64px); }
+.center { text-align: center; }
+
+/* ── FOR YOU ── */
+.pains { max-width: 640px; margin: 0 auto; }
+.pain {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+.pain:last-child { border-bottom: none; }
+.pain-check {
+  flex-shrink: 0;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: rgba(201,169,110,.15);
+  border: 1px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 3px;
+}
+.pain-check svg { width: 12px; height: 12px; stroke: var(--gold-deep); stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.pain-t { font-size: 16.5px; font-weight: 600; color: var(--text); line-height: 1.5; }
+
+.empathy {
+  max-width: 640px;
+  margin: 40px auto 0;
+  background: var(--off);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: clamp(28px, 4vw, 44px);
+  text-align: center;
+}
+.empathy p { font-size: 15px; color: var(--gray); line-height: 1.85; margin-bottom: 18px; }
+.empathy strong { color: var(--black); font-weight: 700; }
+.empathy p:last-of-type { margin-bottom: 26px; }
+
+/* ── STEPS ── */
 .steps {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 2px; margin-top: 64px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
 }
-@media (max-width: 680px) { .steps { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .steps { grid-template-columns: 1fr; } }
 .step {
   background: var(--white);
-  border: 1px solid var(--blush);
-  padding: 48px 36px;
-  transition: box-shadow .28s;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 40px 30px;
+  text-align: left;
 }
-.step:hover { box-shadow: 0 10px 40px rgba(201,169,110,.18); }
 .step-n {
-  font-family: var(--font-serif);
-  font-size: 68px; font-weight: 700;
-  color: var(--gold); opacity: .45;
-  line-height: 1; display: block; margin-bottom: 18px;
-  font-variant-numeric: tabular-nums;
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--black);
+  color: var(--gold);
+  font-weight: 800;
+  font-size: 15px;
+  margin-bottom: 20px;
 }
 .step-t {
-  font-family: var(--font-serif);
-  font-size: 21px; color: var(--espresso);
-  font-weight: 600; margin-bottom: 10px; line-height: 1.3;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  color: var(--black);
+  line-height: 1.35;
+  margin-bottom: 10px;
 }
-.step-d { font-size: 13.5px; color: var(--brown); line-height: 1.75; }
-.step-bar {
-  width: 38px; height: 2px;
-  background: linear-gradient(90deg, var(--gold), var(--blush));
-  margin-top: 24px; border-radius: 1px;
-}
+.step-d { font-size: 14px; color: var(--gray); line-height: 1.75; }
 .how-note {
-  margin-top: 44px;
+  margin-top: 36px;
   text-align: center;
   font-size: 12px;
-  letter-spacing: .1em;
+  font-weight: 700;
+  letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--gold-deep);
 }
 
+/* ── ABOUT ── */
+.about-photo {
+  width: 180px; height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 28px;
+  border: 4px solid var(--gold);
+  box-shadow: 0 16px 44px rgba(17,17,17,.14);
+}
+.about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.about-body { max-width: 640px; margin: 0 auto; text-align: center; }
+.about-body p { font-size: 15.5px; color: var(--gray); line-height: 1.85; margin-bottom: 18px; }
+.about-body strong { color: var(--black); font-weight: 700; }
+.about-sig {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 26px;
+  color: var(--gold-deep);
+  margin-top: 8px;
+}
+
 /* ── TESTIMONIALS ── */
-#testimonials { background: var(--cream); padding: var(--py) 0; }
 .testi-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-  gap: 22px; margin-top: 56px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
 }
 .testi {
   background: var(--white);
-  border: 1px solid var(--blush);
-  padding: 40px 36px; border-radius: 4px;
-  box-shadow: 0 4px 32px rgba(201,169,110,.1);
-  transition: box-shadow .28s, transform .28s;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 34px 30px;
+  text-align: left;
 }
-.testi:hover {
-  box-shadow: 0 10px 52px rgba(201,169,110,.2);
-  transform: translateY(-4px);
-}
-.stars { display:flex; gap:4px; margin-bottom:18px; }
-.star { width:15px; height:15px; color:var(--gold); }
-.testi-q {
-  font-family: var(--font-serif);
-  font-size: 17px; font-style: italic;
-  color: var(--espresso); line-height: 1.65;
-  margin-bottom: 26px;
-}
-.testi-q::before { content:'\201C'; }
-.testi-q::after  { content:'\201D'; }
-.testi-sep { width:28px; height:1px; background:var(--blush); margin-bottom:18px; }
-.testi-name { font-size:12px; font-weight:700; letter-spacing:.08em; color:var(--espresso); text-transform:uppercase; }
-.testi-role { font-size:12px; color:var(--muted); margin-top:3px; }
+.stars { display: flex; gap: 3px; margin-bottom: 16px; }
+.star { width: 14px; height: 14px; color: var(--gold); }
+.star path { fill: currentColor; }
+.testi-q { font-size: 14.5px; color: var(--text); line-height: 1.75; margin-bottom: 20px; font-weight: 500; }
+.testi-q::before { content: '\201C'; }
+.testi-q::after  { content: '\201D'; }
+.testi-name { font-size: 12px; font-weight: 800; letter-spacing: .06em; color: var(--black); text-transform: uppercase; }
+.testi-role { font-size: 12px; color: var(--gray-lt); margin-top: 2px; }
 
 /* ── BOOKING ── */
-#booking { background: var(--plum); padding: var(--py) 0; border-top: 1px solid rgba(232,196,196,.15); }
-#booking .sec-h { color: var(--ivory); }
-.book-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: clamp(40px,7vw,96px);
-  align-items: start;
+.book-card {
+  max-width: 620px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: clamp(32px, 5vw, 56px);
+  text-align: center;
+  box-shadow: 0 20px 56px rgba(17,17,17,.08);
 }
-@media (max-width: 780px) { .book-grid { grid-template-columns: 1fr; } }
+.book-tag {
+  display: inline-block;
+  font-size: 10.5px; font-weight: 800;
+  letter-spacing: .16em; text-transform: uppercase;
+  color: var(--gold-deep);
+  border: 1px dashed var(--gold);
+  padding: 7px 14px; border-radius: 4px;
+  margin-bottom: 20px;
+}
+.perks { max-width: 420px; margin: 0 auto 28px; display: flex; flex-direction: column; gap: 12px; text-align: left; }
+.perk { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--gray); line-height: 1.55; font-weight: 500; }
+.perk-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold-deep); margin-top: 8px; flex-shrink: 0; }
+.avail { margin-top: 18px; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gray-lt); }
+.form-note { max-width: 560px; margin: 22px auto 0; font-size: 11.5px; color: var(--gray-lt); text-align: center; line-height: 1.7; }
 
-.book-left p { font-size:14.5px; color:var(--sand); line-height:1.85; margin: 20px 0 30px; }
-.perks { display:flex; flex-direction:column; gap:13px; margin-bottom:32px; }
-.perk { display:flex; align-items:flex-start; gap:11px; font-size:14px; color:var(--sand); line-height:1.5; }
-.perk-dot { width:5px; height:5px; border-radius:50%; background:var(--gold); margin-top:7px; flex-shrink:0; }
-.avail { font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:600; }
+/* ── FINAL CTA (dark) ── */
+#final {
+  background: var(--black);
+  padding: var(--py) 0;
+  text-align: center;
+}
+.final-hl {
+  font-size: clamp(30px, 5vw, 56px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 1.1;
+  text-wrap: balance;
+  margin-bottom: 16px;
+}
+.final-hl em { font-style: normal; color: var(--gold); }
+.final-sub { font-size: 15px; color: rgba(255,255,255,.65); max-width: 460px; margin: 0 auto 36px; line-height: 1.75; }
+.final-note { margin-top: 22px; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); opacity: .8; }
 
-.book-cta-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center; justify-content: center;
-  gap: 18px; text-align: center;
-  min-height: 320px;
-  background: var(--cream);
-  border: 1px solid var(--blush);
-  border-radius: 4px;
-  padding: clamp(32px,5vw,56px);
+/* ── FOOTER ── */
+footer { background: var(--white); border-top: 1px solid var(--line); padding: 40px 0; }
+.foot-i { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
+.foot-brand-n { font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--black); }
+.foot-tag { font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-deep); font-weight: 700; margin-top: 4px; }
+.foot-disc { font-size: 11px; color: var(--gray-lt); max-width: 440px; line-height: 1.7; text-align: right; }
+@media (max-width: 640px) {
+  .foot-i { flex-direction: column; align-items: flex-start; }
+  .foot-disc { text-align: left; }
 }
-.book-cta-card .btn { width: 100%; justify-content: center; }
-.form-note {
-  font-size: 11.5px; color: var(--sand);
-  text-align: center; margin-top: 20px; line-height: 1.7;
-  opacity: .8;
-}
-.embed-tag {
-  font-size:10px; font-weight:700;
-  letter-spacing:.2em; text-transform:uppercase;
-  color:var(--gold-deep);
-  border:1px dashed var(--gold);
-  padding:7px 14px; border-radius:2px;
-}
-.embed-note { font-size:13.5px; color:var(--brown); line-height:1.7; max-width:320px; }
 
-/* ── BOOKING MODAL ── */
+/* ── MODAL ── */
 .modal-overlay {
   display: none;
   position: fixed; inset: 0; z-index: 900;
-  background: rgba(28,16,8,.75);
+  background: rgba(17,17,17,.78);
   align-items: center; justify-content: center;
   padding: 24px;
 }
@@ -464,9 +397,9 @@ body.modal-open { overflow: hidden; }
   width: 100%; max-width: 480px;
   height: min(80vh, 720px);
   background: var(--white);
-  border-radius: 6px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 30px 80px rgba(0,0,0,.35);
+  box-shadow: 0 30px 80px rgba(0,0,0,.4);
 }
 .modal-box iframe { width: 100% !important; height: 100% !important; border: none; display: block; }
 .modal-close {
@@ -474,10 +407,10 @@ body.modal-open { overflow: hidden; }
   width: 36px; height: 36px;
   display: flex; align-items: center; justify-content: center;
   background: var(--white);
-  border: 1px solid var(--rose-light);
+  border: 1px solid var(--line);
   border-radius: 50%;
   font-size: 20px; line-height: 1;
-  color: var(--charcoal);
+  color: var(--black);
   cursor: pointer;
 }
 @media (max-width: 640px) {
@@ -486,289 +419,142 @@ body.modal-open { overflow: hidden; }
   .modal-close { top: 10px; right: 10px; width: 38px; height: 38px; }
 }
 
-/* ── FINAL CTA ── */
-#final {
-  background: linear-gradient(160deg, var(--plum) 0%, #3A2430 60%, #4A2E38 130%);
-  padding: var(--py) 0;
-  text-align: center;
-  position: relative; overflow: hidden;
-}
-#final::before {
-  content:''; position:absolute; inset:0;
-  background: radial-gradient(ellipse 80% 55% at 50% 40%, rgba(201,169,110,.16) 0%, transparent 68%);
-  pointer-events:none;
-}
-#final .wrap { position:relative; z-index:1; }
-.final-hl {
-  font-family: var(--font-serif);
-  font-size: clamp(36px,5.5vw,64px);
-  font-weight: 700; color: var(--ivory);
-  line-height: 1.14; letter-spacing: -.015em;
-  text-wrap: balance; margin-bottom: 18px;
-}
-.final-hl em { font-style:italic; color:var(--gold); }
-.final-sub {
-  font-size: clamp(14px,1.8vw,17px);
-  color: var(--sand);
-  max-width: 480px; margin: 0 auto 44px;
-  line-height: 1.8;
-}
-.final-note {
-  margin-top: 26px;
-  font-size: 11px; letter-spacing: .16em;
-  text-transform: uppercase;
-  color: var(--gold-light); opacity: .7;
-}
-
-/* ── FOOTER ── */
-footer {
-  background: var(--espresso);
-  border-top: 1px solid rgba(201,169,110,.15);
-  padding: 48px 0;
-}
-.foot-i {
-  display:flex; flex-wrap:wrap;
-  align-items:center; justify-content:space-between;
-  gap:20px;
-}
-.foot-brand-n {
-  font-family:var(--font-serif);
-  font-style:italic; font-size:20px; color:var(--ivory);
-}
-.foot-tag {
-  font-size:10px; letter-spacing:.2em;
-  text-transform:uppercase; color:var(--gold);
-  font-weight:600; margin-top:5px;
-}
-.foot-disc {
-  font-size:11.5px; color:rgba(217,201,188,.45);
-  max-width:420px; line-height:1.75; text-align:right;
-}
-@media (max-width:600px) {
-  .foot-i { flex-direction:column; align-items:flex-start; }
-  .foot-disc { text-align:left; }
-}
-
-.star path { fill: currentColor; }
-
-/* ══════════════════════
-   MOBILE OPTIMIZATIONS
-   ══════════════════════ */
-@media (max-width: 767px) {
-  :root { --py: clamp(44px, 10vw, 72px); }
-
-  #hero { padding-top: 68px; align-items: flex-start; min-height: 0; }
-  .hero-body { padding: 24px 0 48px; max-width: 100%; }
-
-  .eyebrow { font-size: 9px; letter-spacing: .15em; margin-bottom: 10px; }
-
-  .hero-hl {
-    font-size: clamp(30px, 8.5vw, 42px);
-    line-height: 1.1;
-    margin-bottom: 14px;
-  }
-  .hero-sub {
-    font-size: 13.5px;
-    line-height: 1.65;
-    margin-bottom: 22px;
-    max-width: 100%;
-  }
-
-  .hero-btns { flex-direction: column; gap: 0; }
-  .hero-btns .btn-rose {
-    width: 100%;
-    justify-content: center;
-    padding: 17px 20px;
-    font-size: 12.5px;
-  }
-
-  .hero-lines { display: none; }
-
-  .nav-logo { font-size: 13px; }
-  #nav .btn { font-size: 8.5px; padding: 8px 10px; letter-spacing: .04em; white-space: nowrap; }
-
-  .steps { grid-template-columns: 1fr; }
-  .step { padding: 32px 24px; }
-  .step-n { font-size: 52px; }
-
-  .testi-grid { grid-template-columns: 1fr; gap: 16px; }
-  .testi { padding: 28px 24px; }
-
-  .about-grid { grid-template-columns: 1fr; gap: 24px; }
-  .photo-ring { width: 180px; height: 180px; }
-
-  .fy-grid { grid-template-columns: 1fr; gap: 32px; }
-  .fy-box { padding: 28px 24px; }
-
-  .book-grid { grid-template-columns: 1fr; gap: 16px; }
-  .book-left p,
-  .book-left .perks,
-  .book-left .avail { display: none; }
-  .book-left .sec-h { font-size: clamp(26px, 7vw, 34px); margin-bottom: 0; }
-  .book-left { margin-bottom: 0; }
-  .book-cta-card { padding: 28px 20px; }
-
-  #final .btn-rose { width: 100%; justify-content: center; }
-
-  body { padding-bottom: 68px; }
-}
-
-.sec-h {
-  font-family: var(--font-serif);
-  font-size: clamp(30px, 4vw, 52px);
-  font-weight: 700;
-  color: var(--espresso);
-  line-height: 1.13;
-  text-wrap: balance;
-  letter-spacing: -.01em;
-}
-.sec-h em { font-style: italic; color: var(--rose); }
-.sec-sub { margin-top: 14px; font-size: 15px; color: var(--muted); line-height: 1.8; max-width: 540px; }
-.sec-hdr { margin-bottom: clamp(48px,7vw,84px); }
-
-/* ── STICKY BOTTOM CTA (mobile only) ── */
+/* ── STICKY MOBILE CTA ── */
 #sticky-bar {
   display: none;
   position: fixed;
   bottom: 0; left: 0; right: 0;
   z-index: 500;
   background: var(--gold);
-  box-shadow: 0 -2px 20px rgba(28,16,8,.4);
+  box-shadow: 0 -2px 20px rgba(17,17,17,.25);
   transform: translateY(0);
   transition: transform .3s ease;
 }
 #sticky-bar.hidden { transform: translateY(100%); }
 #sticky-bar button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
   width: 100%;
   padding: 17px 20px;
-  font-family: var(--font-sans);
-  font-size: 12.5px;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--espresso);
-  background: transparent;
-  border: none;
-  cursor: pointer;
+  font-family: var(--font);
+  font-size: 13px; font-weight: 800;
+  letter-spacing: .06em; text-transform: uppercase;
+  color: var(--black);
+  background: transparent; border: none; cursor: pointer;
 }
 #sticky-bar button:active { background: var(--gold-deep); }
-#sticky-bar .arr { transition: transform .18s; }
 
-@media (max-width: 767px) { #sticky-bar { display: block; } }
+/* ── MOBILE ── */
+@media (max-width: 767px) {
+  :root { --py: clamp(48px, 10vw, 72px); }
+  .nav-logo { font-size: 15px; }
+  #nav .btn-sm { font-size: 9px; padding: 9px 12px; white-space: nowrap; letter-spacing: .03em; }
+  #hero { padding-top: 92px; }
+  .eyebrow { font-size: 9.5px; margin-bottom: 14px; }
+  .hero-hl { font-size: clamp(27px, 7.6vw, 38px); margin-bottom: 14px; }
+  .hero-sub { font-size: 14.5px; margin-bottom: 24px; }
+  #hero .btn { width: 100%; }
+  .hero-ba { margin-top: 36px; }
+  .empathy .btn, #final .btn { width: 100%; }
+  body { padding-bottom: 62px; }
+}
 </style>
 
 <!-- NAV -->
 <nav id="nav">
   <div class="wrap nav-i">
     <div class="nav-logo">Baddiee After Baby</div>
-    <button type="button" class="btn btn-outline open-booking-btn" style="padding:10px 22px;font-size:11px;">Start My Transformation</button>
+    <button type="button" class="btn btn-sm open-booking-btn">Start My Transformation</button>
   </div>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-glow">
-    <span class="g1"></span>
-    <span class="g2"></span>
-  </div>
-  <div class="hero-lines"></div>
-  <div class="wrap">
-    <div class="hero-body">
-      <span class="eyebrow" style="color:var(--gold-deep);">Free Strategy Session — Limited Spots</span>
-      <h1 class="hero-hl">Finally. A Real Plan For <em>Your Postpartum Body.</em></h1>
-      <p class="hero-sub">Book a free call. Walk away with a clear picture of where your body is — and exactly what to do next.</p>
-      <div class="hero-btns">
-        <button type="button" class="btn btn-rose open-booking-btn">Start My Transformation <span class="arr">→</span></button>
+  <div class="narrow">
+    <span class="eyebrow">Free Strategy Session — Limited Spots</span>
+    <h1 class="hero-hl">Finally. A Real Plan For <em>Your Postpartum Body.</em></h1>
+    <p class="hero-sub">Book a free call. Walk away with a clear picture of where your body is — and exactly what to do next.</p>
+    <button type="button" class="btn open-booking-btn">Start My Transformation <span class="arr">→</span></button>
+    <p class="hero-trust">Free. No pitch. No pressure. Just clarity.</p>
+    <div class="hero-ba fi on">
+      <span class="ba-lbl">My Transformation Using The Baddiee After Baby Method</span>
+      <div class="ba-grid">
+        <div class="ba-item">
+          <img src="images/before.jpg" alt="Larissa before her postpartum rebuild">
+          <span class="ba-tag">Before</span>
+        </div>
+        <div class="ba-item">
+          <img src="images/after.jpg" alt="Larissa after her postpartum rebuild">
+          <span class="ba-tag">After</span>
+        </div>
       </div>
-      <p class="hero-trust">Free. No pitch. No pressure. Just clarity.</p>
     </div>
   </div>
 </section>
 
 <!-- THIS IS FOR YOU -->
-<section id="for-you">
-  <div class="wrap">
-    <div class="fy-grid">
-      <div>
-        <span class="eyebrow" style="color:var(--gold-light);">Is This For You?</span>
-        <h2 class="sec-h" style="color:var(--ivory); margin-top:14px;">This Is <em>For You</em> If…</h2>
-        <div class="pains fi">
-          <div class="pain"><span class="pain-i">i.</span><span class="pain-t">You feel disconnected from your body after having a baby</span></div>
-          <div class="pain"><span class="pain-i">ii.</span><span class="pain-t">You've tried programs that didn't account for postpartum recovery</span></div>
-          <div class="pain"><span class="pain-i">iii.</span><span class="pain-t">You want to feel strong, confident, and like yourself again</span></div>
-          <div class="pain"><span class="pain-i">iv.</span><span class="pain-t">You're tired of being told to just "bounce back"</span></div>
-          <div class="pain"><span class="pain-i">v.</span><span class="pain-t">You're ready for a real plan built around your whole self</span></div>
-        </div>
-      </div>
-      <div class="fi">
-        <div class="fy-box">
-          <p>If any of this sounds like you — you are not broken, and you are not alone. Every postpartum body carries a story: the pregnancy, the birth, the hormones, the sleepless nights, the shift in who you are. Generic fitness advice was never built for that story.</p>
-          <p>You don't need to push harder. You need a plan that actually understands what your body has been through — and <strong>that's exactly what the strategy call is for.</strong></p>
-          <button type="button" class="btn btn-rose open-booking-btn" style="margin-top:24px;">Start My Transformation <span class="arr">→</span></button>
-        </div>
-      </div>
+<section class="sec sec-off" id="for-you">
+  <div class="narrow">
+    <div class="sec-hdr fi">
+      <span class="eyebrow" style="display:block; text-align:center;">Is This For You?</span>
+      <h2 class="sec-h">This Is <em>For You</em> If…</h2>
+    </div>
+    <div class="pains fi">
+      <div class="pain"><span class="pain-check"><svg viewBox="0 0 14 14"><polyline points="2 7.5 5.5 11 12 3"/></svg></span><span class="pain-t">You feel disconnected from your body after having a baby</span></div>
+      <div class="pain"><span class="pain-check"><svg viewBox="0 0 14 14"><polyline points="2 7.5 5.5 11 12 3"/></svg></span><span class="pain-t">You've tried programs that didn't account for postpartum recovery</span></div>
+      <div class="pain"><span class="pain-check"><svg viewBox="0 0 14 14"><polyline points="2 7.5 5.5 11 12 3"/></svg></span><span class="pain-t">You want to feel strong, confident, and like yourself again</span></div>
+      <div class="pain"><span class="pain-check"><svg viewBox="0 0 14 14"><polyline points="2 7.5 5.5 11 12 3"/></svg></span><span class="pain-t">You're tired of being told to just "bounce back"</span></div>
+      <div class="pain"><span class="pain-check"><svg viewBox="0 0 14 14"><polyline points="2 7.5 5.5 11 12 3"/></svg></span><span class="pain-t">You're ready for a real plan built around your whole self</span></div>
+    </div>
+    <div class="empathy fi">
+      <p>If any of this sounds like you — you are not broken, and you are not alone. Every postpartum body carries a story: the pregnancy, the birth, the hormones, the sleepless nights, the shift in who you are. Generic fitness advice was never built for that story.</p>
+      <p>You don't need to push harder. You need a plan that actually understands what your body has been through — and <strong>that's exactly what the strategy call is for.</strong></p>
+      <button type="button" class="btn open-booking-btn">Start My Transformation <span class="arr">→</span></button>
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about">
-  <div class="wrap">
-    <div class="about-grid">
-      <div class="photo-col fi">
-        <div class="photo-ring"><img src="images/larissa.jpg" alt="Larissa Mendes — Founder, Baddiee After Baby"></div>
-        <div class="photo-name">Larissa Mendes</div>
-        <div class="photo-role">Founder, Baddiee After Baby</div>
+<section class="sec" id="about">
+  <div class="narrow">
+    <div class="fi">
+      <span class="eyebrow" style="display:block; text-align:center;">About Larissa</span>
+      <h2 class="sec-h" style="margin-bottom:32px;">Rebuilt From <em>The Inside Out</em></h2>
+      <div class="about-photo">
+        <img src="images/larissa.jpg" alt="Larissa Mendes — Founder, Baddiee After Baby">
       </div>
-      <div class="fi">
-        <span class="eyebrow">About Larissa</span>
-        <h2 class="sec-h" style="margin-top:14px; margin-bottom:22px;">Rebuilt From <em>The Inside Out</em></h2>
-        <span class="badge">★&nbsp; Postpartum Coach</span>
-        <div class="about-body">
-          <p>I'm Larissa Mendes, founder of Baddiee After Baby. After experiencing postpartum depression, anxiety, and feeling completely disconnected from my body after having my son, I built this method from the ground up.</p>
-          <p>My mission is to help mothers <strong>rebuild — not bounce back</strong> — through a system that addresses your core, your confidence, your hormones, and your identity.</p>
-          <p>This isn't just coaching. It's a transformation built by someone who's lived exactly where you are.</p>
-        </div>
-        <div class="sig-row">
-          <div class="sig-line"></div>
-          <div class="sig-name">Larissa</div>
-          <div class="sig-line"></div>
-        </div>
+      <div class="about-body">
+        <p>I'm Larissa Mendes, founder of Baddiee After Baby. After experiencing postpartum depression, anxiety, and feeling completely disconnected from my body after having my son, I built this method from the ground up.</p>
+        <p>My mission is to help mothers <strong>rebuild — not bounce back</strong> — through a system that addresses your core, your confidence, your hormones, and your identity.</p>
+        <p>This isn't just coaching. It's a transformation built by someone who's lived exactly where you are.</p>
+        <div class="about-sig">Larissa</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- WHAT HAPPENS ON THE CALL -->
-<section id="how">
+<section class="sec sec-off" id="how">
   <div class="wrap">
     <div class="sec-hdr fi">
-      <span class="eyebrow">The Call</span>
-      <h2 class="sec-h" style="margin-top:14px;">What Happens On The Call</h2>
+      <span class="eyebrow" style="display:block; text-align:center;">The Call</span>
+      <h2 class="sec-h">What Happens On The Call</h2>
       <p class="sec-sub">No sales pitch. No scare tactics. Just an honest, personal conversation about your body and your next step.</p>
     </div>
     <div class="steps">
       <div class="step fi">
-        <span class="step-n">01</span>
+        <span class="step-n">1</span>
         <div class="step-t">We Talk About Where You Are Right Now</div>
         <div class="step-d">We'll talk through your body, your history, and what's not working — no judgment, just an honest conversation.</div>
-        <div class="step-bar"></div>
       </div>
       <div class="step fi">
-        <span class="step-n">02</span>
+        <span class="step-n">2</span>
         <div class="step-t">We Identify Exactly What's Been Holding You Back</div>
         <div class="step-d">No guessing, no generic advice. We'll pinpoint the real reasons things haven't stuck — and what actually needs to change.</div>
-        <div class="step-bar"></div>
       </div>
       <div class="step fi">
-        <span class="step-n">03</span>
+        <span class="step-n">3</span>
         <div class="step-t">You Leave With A Clear Next Step</div>
         <div class="step-d">Whether you work with Larissa or not, you walk away with a real plan built specifically for where you are.</div>
-        <div class="step-bar"></div>
       </div>
     </div>
     <p class="how-note fi">This call is completely free. There is no obligation to purchase anything.</p>
@@ -776,14 +562,13 @@ footer {
 </section>
 
 <!-- TESTIMONIALS -->
-<section id="testimonials">
+<section class="sec" id="testimonials">
   <div class="wrap">
-    <div class="sec-hdr fi" style="text-align:center; max-width:100%; margin-inline:auto;">
-      <span class="eyebrow">What Mothers Are Saying</span>
-      <h2 class="sec-h" style="margin-top:14px;">Real Women. <em>Real Results.</em></h2>
+    <div class="sec-hdr fi">
+      <span class="eyebrow" style="display:block; text-align:center;">What Mothers Are Saying</span>
+      <h2 class="sec-h">Real Women. <em>Real Results.</em></h2>
     </div>
     <div class="testi-grid">
-
       <div class="testi fi">
         <div class="stars">
           <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -793,11 +578,9 @@ footer {
           <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
         </div>
         <div class="testi-q">For the first time since having my baby, I feel like myself again — confident, strong, and not constantly exhausted. This changed more than my body.</div>
-        <div class="testi-sep"></div>
         <div class="testi-name">Sarah M.</div>
         <div class="testi-role">Mom of 2, 4 months postpartum</div>
       </div>
-
       <div class="testi fi">
         <div class="stars">
           <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -807,11 +590,9 @@ footer {
           <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
         </div>
         <div class="testi-q">I finally have my energy back. But more than that, I stopped feeling guilty about taking time for myself. My confidence is finally coming back too.</div>
-        <div class="testi-sep"></div>
         <div class="testi-name">Priya K.</div>
         <div class="testi-role">First-time mom, 5 months postpartum</div>
       </div>
-
       <div class="testi fi">
         <div class="stars">
           <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -821,52 +602,44 @@ footer {
           <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
         </div>
         <div class="testi-q">The call alone gave me more clarity than months of googling. I felt heard, understood, and hopeful for the first time in a long time.</div>
-        <div class="testi-sep"></div>
         <div class="testi-name">Monique T.</div>
         <div class="testi-role">Mom of 3, 10 months postpartum</div>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- BOOKING -->
-<section id="booking">
-  <div class="wrap">
-    <div class="book-grid">
-      <div class="book-left fi">
-        <span class="eyebrow">Book Your Free Call</span>
-        <h2 class="sec-h" style="margin-top:14px;">Book Your Free <em>Strategy Session</em></h2>
-        <p>Pick a time that works for you. Takes less than 60 seconds — completely free.</p>
-        <div class="perks">
-          <div class="perk"><span class="perk-dot"></span><span>Free 30-minute strategy session with Larissa</span></div>
-          <div class="perk"><span class="perk-dot"></span><span>No pitch, no pressure — just clarity</span></div>
-          <div class="perk"><span class="perk-dot"></span><span>Walk away with a real next step, either way</span></div>
-          <div class="perk"><span class="perk-dot"></span><span>Learn if 1-on-1 coaching is the right fit for you</span></div>
-        </div>
-        <div class="avail">Limited spots available each week.</div>
-      </div>
-
-      <div class="fi" style="width:100%;">
-        <div class="book-cta-card">
-          <span class="embed-tag">30 Minutes · Free · No Obligation</span>
-          <p class="embed-note">Click below to open the scheduler and pick a time that works for your free strategy session with Larissa.</p>
-          <button type="button" class="btn btn-rose open-booking-btn">Start My Transformation <span class="arr">→</span></button>
-        </div>
-        <p class="form-note">The call is completely free with no obligation to purchase. Results may vary. Baddiee After Baby programs are not a substitute for medical advice.</p>
-      </div>
+<section class="sec sec-off" id="booking">
+  <div class="narrow">
+    <div class="sec-hdr fi">
+      <span class="eyebrow" style="display:block; text-align:center;">Book Your Free Call</span>
+      <h2 class="sec-h">Book Your Free <em>Strategy Session</em></h2>
+      <p class="sec-sub">Pick a time that works for you. Takes less than 60 seconds — completely free.</p>
     </div>
+    <div class="book-card fi">
+      <span class="book-tag">30 Minutes · Free · No Obligation</span>
+      <div class="perks">
+        <div class="perk"><span class="perk-dot"></span><span>Free 30-minute strategy session with Larissa</span></div>
+        <div class="perk"><span class="perk-dot"></span><span>No pitch, no pressure — just clarity</span></div>
+        <div class="perk"><span class="perk-dot"></span><span>Walk away with a real next step, either way</span></div>
+        <div class="perk"><span class="perk-dot"></span><span>Learn if 1-on-1 coaching is the right fit for you</span></div>
+      </div>
+      <button type="button" class="btn open-booking-btn" style="width:100%;">Start My Transformation <span class="arr">→</span></button>
+      <div class="avail">Limited spots available each week.</div>
+    </div>
+    <p class="form-note">The call is completely free with no obligation to purchase. Results may vary. Baddiee After Baby programs are not a substitute for medical advice.</p>
   </div>
 </section>
 
 <!-- FINAL CTA -->
 <section id="final">
-  <div class="wrap">
-    <div class="fi" style="text-align:center;">
-      <span class="eyebrow" style="color:var(--gold-light);">Your Transformation Starts Here</span>
-      <h2 class="final-hl">You Deserve To Feel<br>Like <em>Yourself Again.</em></h2>
+  <div class="narrow">
+    <div class="fi">
+      <span class="eyebrow" style="color:var(--gold);">Your Transformation Starts Here</span>
+      <h2 class="final-hl">You Deserve To Feel Like <em>Yourself Again.</em></h2>
       <p class="final-sub">Book your free strategy session today. Limited spots available each week.</p>
-      <button type="button" class="btn btn-rose open-booking-btn" style="font-size:13px; padding:19px 46px;">Start My Transformation <span class="arr">→</span></button>
+      <button type="button" class="btn open-booking-btn" style="font-size:15px; padding:22px 52px;">Start My Transformation <span class="arr">→</span></button>
       <p class="final-note">Limited spots available each week.</p>
     </div>
   </div>
@@ -899,18 +672,13 @@ footer {
 </footer>
 
 <script>
-// Sticky nav
-const nav = document.getElementById('nav');
-const onScroll = () => nav.classList.toggle('stuck', scrollY > 40);
-window.addEventListener('scroll', onScroll, { passive: true });
-
 // Fade-in observer
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (!e.isIntersecting) return;
     const siblings = [...e.target.parentElement.querySelectorAll('.fi')];
     const i = siblings.indexOf(e.target);
-    e.target.style.transitionDelay = (i * 80) + 'ms';
+    e.target.style.transitionDelay = (i * 70) + 'ms';
     e.target.classList.add('on');
     obs.unobserve(e.target);
   });
@@ -926,7 +694,7 @@ if (stickyBar && bookingSection) {
   }, { threshold: 0.05 }).observe(bookingSection);
 }
 
-// Booking modal (opens the LeadConnector scheduling widget as a popup)
+// Booking modal
 const bookingModalOverlay = document.getElementById('booking-modal-overlay');
 const bookingModalClose = document.getElementById('booking-modal-close');
 if (bookingModalOverlay && bookingModalClose) {
