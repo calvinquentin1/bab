@@ -401,9 +401,12 @@ a { color: inherit; text-decoration: none; }
 
 /* ── INLINE CALENDAR EMBED ── */
 #booking { scroll-margin-top: 76px; }
+#booking .book-card { margin-top: 28px; }
+.book-hdr { text-align: center; margin-bottom: 24px; }
 .cal-embed {
+  scroll-margin-top: 84px;
   max-width: 760px;
-  margin: 22px auto 0;
+  margin: 0 auto;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 12px;
@@ -700,13 +703,15 @@ footer { background: var(--white); border-top: 1px solid var(--line); padding: 4
 <!-- BOOKING -->
 <section class="sec sec-off" id="booking">
   <div class="narrow">
-    <div class="sec-hdr fi" style="margin-bottom:32px;">
-      <span class="eyebrow" style="display:block; text-align:center;">Book Your Free Call</span>
-      <h2 class="sec-h">Pick Your <em>Time Below</em></h2>
-      <p class="sec-sub">Choose a slot that works for you. Takes less than 60 seconds — completely free.</p>
-    </div>
-    <div class="book-card fi">
+    <div class="book-hdr">
+      <h2 class="sec-h" style="margin-bottom:12px;">Pick Your <em>Time Below</em></h2>
       <span class="book-tag">30 Minutes · Free · No Obligation</span>
+    </div>
+    <div class="cal-embed">
+      <iframe src="https://api.leadconnectorhq.com/widget/booking/a1WmrQeKjywqnDcIbKdd" allow="payment" style="width: 100%;height:640px;border:none;overflow: hidden;" scrolling="no" id="a1WmrQeKjywqnDcIbKdd_1785881831767" title="Book Your Free Strategy Call"></iframe>
+    </div>
+    <div class="avail">Limited spots available each week.</div>
+    <div class="book-card fi">
       <div class="perks">
         <div class="perk"><span class="perk-dot"></span><span>Free 30-minute call with Larissa</span></div>
         <div class="perk"><span class="perk-dot"></span><span>We map out your specific postpartum situation</span></div>
@@ -714,10 +719,6 @@ footer { background: var(--white); border-top: 1px solid var(--line); padding: 4
         <div class="perk"><span class="perk-dot"></span><span>You decide if it is right for you, zero pressure</span></div>
       </div>
     </div>
-    <div class="cal-embed">
-      <iframe src="https://api.leadconnectorhq.com/widget/booking/a1WmrQeKjywqnDcIbKdd" allow="payment" style="width: 100%;height:640px;border:none;overflow: hidden;" scrolling="no" id="a1WmrQeKjywqnDcIbKdd_1785881831767" title="Book Your Free Strategy Call"></iframe>
-    </div>
-    <div class="avail">Limited spots available each week.</div>
     <p class="form-note">The call is completely free with no obligation to purchase. Results may vary. Baddiee After Baby programs are not a substitute for medical advice.</p>
   </div>
 </section>
@@ -763,10 +764,12 @@ if (stickyBar && bookingSection) {
   }, { threshold: 0.05 }).observe(bookingSection);
 }
 
-// All CTAs scroll down to the inline calendar
+// All CTAs scroll down to the calendar itself, not the top of the section
+const calEmbed = document.querySelector('.cal-embed');
 document.querySelectorAll('.open-booking-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    if (bookingSection) bookingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const target = calEmbed || bookingSection;
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
 </script>
