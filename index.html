@@ -83,6 +83,14 @@ a { color: inherit; text-decoration: none; }
 .btn .arr { display: inline-block; transition: transform .18s; }
 .btn:hover .arr { transform: translateX(5px); }
 .btn-sm { font-size: 11px; padding: 12px 22px; }
+.btn-lg { font-size: 15px; padding: 22px 52px; }
+.btn-price {
+  padding-left: 11px;
+  border-left: 1px solid rgba(17,17,17,.3);
+  font-weight: 800;
+  opacity: .8;
+  white-space: nowrap;
+}
 
 /* ── NAV ── */
 #nav {
@@ -417,6 +425,8 @@ footer { background: var(--white); border-top: 1px solid var(--line); padding: 4
   :root { --py: clamp(48px, 10vw, 72px); }
   .nav-logo { font-size: 15px; }
   #nav .btn-sm { font-size: 9px; padding: 9px 12px; white-space: nowrap; letter-spacing: .03em; }
+  /* the nav pill is too narrow for the price on phones — the hero states it right below */
+  #nav .btn-price { display: none; }
   #hero { padding-top: 92px; }
   .eyebrow { font-size: 9.5px; margin-bottom: 14px; }
   .hero-hl { font-size: clamp(27px, 7.6vw, 38px); margin-bottom: 14px; }
@@ -437,7 +447,7 @@ footer { background: var(--white); border-top: 1px solid var(--line); padding: 4
 <nav id="nav">
   <div class="wrap nav-i">
     <div class="nav-logo">Baddiee After Baby</div>
-    <a href="#" class="btn btn-sm checkout-btn">Start Training This Week</a>
+    <a href="#" class="btn btn-sm checkout-btn">Start Training This Week <span class="btn-price">$50/mo</span></a>
   </div>
 </nav>
 
@@ -447,7 +457,7 @@ footer { background: var(--white); border-top: 1px solid var(--line); padding: 4
     <span class="eyebrow">Live Group Workouts · 3x Per Week · $50/Month</span>
     <h1 class="hero-hl">Get Your Body Back After Baby. <em>Starting This Week.</em></h1>
     <p class="hero-sub">Join live postpartum training 3 times a week with a specialist who has been exactly where you are. From your living room. No gym. No babysitter. No guesswork.</p>
-    <a href="#" class="btn checkout-btn">Start Training This Week <span class="arr">→</span></a>
+    <a href="#" class="btn checkout-btn">Start Training This Week <span class="btn-price">$50/mo</span> <span class="arr">→</span></a>
     <p class="hero-trust"><strong>Roughly $4 per live session with a postpartum specialist.</strong> Month to month. Cancel anytime.</p>
     <div class="hero-ba fi on">
       <span class="ba-lbl">My Transformation Using The Baddiee After Baby Method</span>
@@ -482,7 +492,7 @@ footer { background: var(--white); border-top: 1px solid var(--line); padding: 4
     <div class="empathy fi">
       <p><strong>If any of this sounds like you, you are in the right place.</strong> Every postpartum body is different. The hormones, the core damage, the identity shift, the exhaustion. Generic fitness programs were never designed for what you have been through. This program was.</p>
       <p>Most programs give you a PDF and wish you luck. <strong>This one shows up with you, live, three times a week</strong> — and does not stop until you feel like yourself again.</p>
-      <a href="#" class="btn checkout-btn">Start Training This Week <span class="arr">→</span></a>
+      <a href="#" class="btn checkout-btn">Start Training This Week <span class="btn-price">$50/mo</span> <span class="arr">→</span></a>
     </div>
   </div>
 </section>
@@ -504,7 +514,7 @@ footer { background: var(--white); border-top: 1px solid var(--line); padding: 4
       </div>
     </div>
     <div class="center" style="margin-top:30px;">
-      <a href="#" class="btn checkout-btn fi">Start Training This Week <span class="arr">→</span></a>
+      <a href="#" class="btn checkout-btn fi">Start Training This Week <span class="btn-price">$50/mo</span> <span class="arr">→</span></a>
     </div>
   </div>
 </section>
@@ -584,7 +594,7 @@ footer { background: var(--white); border-top: 1px solid var(--line); padding: 4
       <h2 class="final-hl">You Have Been <em>Waiting Long Enough.</em></h2>
       <p class="final-sub">Your first live workout is this week. All you have to do is show up.</p>
       <p class="final-price">3 live workouts a week. Roughly $4 each.</p>
-      <a href="#" class="btn checkout-btn" style="font-size:15px; padding:22px 52px;">Start Training This Week <span class="arr">→</span></a>
+      <a href="#" class="btn btn-lg checkout-btn">Start Training This Week <span class="btn-price">$50/mo</span> <span class="arr">→</span></a>
       <p class="final-note">$50/month. Month to month. Cancel anytime.</p>
     </div>
   </div>
@@ -605,7 +615,7 @@ footer { background: var(--white); border-top: 1px solid var(--line); padding: 4
         <div class="perk"><span class="perk-dot"></span><span>Real coaching in real time, not a prerecorded video</span></div>
         <div class="perk"><span class="perk-dot"></span><span>A community of women doing it right alongside you</span></div>
       </div>
-      <a href="#" class="btn checkout-btn" style="width:100%; margin-top:28px;">Start Training This Week <span class="arr">→</span></a>
+      <a href="#" class="btn checkout-btn" style="width:100%; margin-top:28px;">Start Training This Week <span class="btn-price">$50/mo</span> <span class="arr">→</span></a>
       <div class="avail">$50/month. Cancel anytime.</div>
     </div>
     <p class="form-note">Results may vary. Baddiee After Baby programs are not a substitute for medical advice.</p>
@@ -614,7 +624,7 @@ footer { background: var(--white); border-top: 1px solid var(--line); padding: 4
 
 <!-- STICKY MOBILE CTA BAR -->
 <div id="sticky-bar">
-  <a href="#" class="checkout-btn">Start Training This Week <span class="arr">→</span></a>
+  <a href="#" class="checkout-btn">Start Training This Week <span class="btn-price">$50/mo</span> <span class="arr">→</span></a>
 </div>
 
 <!-- FOOTER -->
