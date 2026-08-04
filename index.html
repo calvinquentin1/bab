@@ -308,6 +308,42 @@ a { color: inherit; text-decoration: none; }
   margin-top: 8px;
 }
 
+/* ── VIDEO TESTIMONIALS ── */
+.vid-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 660px;
+  margin: 0 auto clamp(36px, 5vw, 52px);
+}
+@media (max-width: 560px) { .vid-grid { grid-template-columns: 1fr; max-width: 330px; } }
+.vid {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 16px 44px rgba(17,17,17,.1);
+}
+.vid video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  background: var(--black);
+  object-fit: cover;
+}
+.vid figcaption {
+  padding: 16px 18px;
+  border-top: 1px solid var(--line);
+  text-align: left;
+}
+.vid-name {
+  display: block;
+  font-size: 12px; font-weight: 800;
+  letter-spacing: .06em; text-transform: uppercase;
+  color: var(--black);
+}
+.vid-role { display: block; font-size: 12px; color: var(--gray-lt); margin-top: 2px; }
+
 /* ── TESTIMONIALS ── */
 .testi-grid {
   display: grid;
@@ -544,6 +580,26 @@ footer { background: var(--white); border-top: 1px solid var(--line); padding: 4
     <div class="sec-hdr fi">
       <span class="eyebrow" style="display:block; text-align:center;">What Mothers Are Saying</span>
       <h2 class="sec-h">Real Women. <em>Real Results.</em></h2>
+    </div>
+    <div class="vid-grid">
+      <figure class="vid fi">
+        <video controls preload="none" playsinline poster="videos/christina-poster.jpg">
+          <source src="videos/christina.mp4" type="video/mp4">
+        </video>
+        <figcaption>
+          <span class="vid-name">Christina</span>
+          <span class="vid-role">In her own words</span>
+        </figcaption>
+      </figure>
+      <figure class="vid fi">
+        <video controls preload="none" playsinline poster="videos/clara-poster.jpg">
+          <source src="videos/clara.mp4" type="video/mp4">
+        </video>
+        <figcaption>
+          <span class="vid-name">Clara</span>
+          <span class="vid-role">In her own words</span>
+        </figcaption>
+      </figure>
     </div>
     <div class="testi-grid">
       <div class="testi fi">
