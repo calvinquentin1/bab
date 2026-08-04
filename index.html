@@ -314,7 +314,7 @@ a { color: inherit; text-decoration: none; }
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
   max-width: 660px;
-  margin: 0 auto clamp(36px, 5vw, 52px);
+  margin: 0 auto;
 }
 @media (max-width: 560px) { .vid-grid { grid-template-columns: 1fr; max-width: 330px; } }
 .vid {
@@ -533,8 +533,37 @@ footer { background: var(--white); border-top: 1px solid var(--line); padding: 4
   </div>
 </section>
 
+<!-- VIDEO TESTIMONIALS -->
+<section class="sec sec-off" id="stories">
+  <div class="wrap">
+    <div class="sec-hdr fi" style="margin-bottom:clamp(28px, 4vw, 40px);">
+      <span class="eyebrow" style="display:block; text-align:center;">In Their Own Words</span>
+    </div>
+    <div class="vid-grid">
+      <figure class="vid fi">
+        <video controls preload="none" playsinline poster="videos/christina-poster.jpg">
+          <source src="videos/christina.mp4" type="video/mp4">
+        </video>
+        <figcaption>
+          <span class="vid-name">Christina</span>
+          <span class="vid-role">In her own words</span>
+        </figcaption>
+      </figure>
+      <figure class="vid fi">
+        <video controls preload="none" playsinline poster="videos/clara-poster.jpg">
+          <source src="videos/clara.mp4" type="video/mp4">
+        </video>
+        <figcaption>
+          <span class="vid-name">Clara</span>
+          <span class="vid-role">In her own words</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- WHAT'S INCLUDED -->
-<section class="sec sec-off" id="included">
+<section class="sec" id="included">
   <div class="wrap">
     <div class="sec-hdr fi">
       <span class="eyebrow" style="display:block; text-align:center;">What Is Included</span>
@@ -556,7 +585,7 @@ footer { background: var(--white); border-top: 1px solid var(--line); padding: 4
 </section>
 
 <!-- ABOUT -->
-<section class="sec" id="about">
+<section class="sec sec-off" id="about">
   <div class="narrow">
     <div class="fi">
       <span class="eyebrow" style="display:block; text-align:center;">About Larissa</span>
@@ -575,31 +604,11 @@ footer { background: var(--white); border-top: 1px solid var(--line); padding: 4
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="sec sec-off" id="testimonials">
+<section class="sec" id="testimonials">
   <div class="wrap">
     <div class="sec-hdr fi">
       <span class="eyebrow" style="display:block; text-align:center;">What Mothers Are Saying</span>
       <h2 class="sec-h">Real Women. <em>Real Results.</em></h2>
-    </div>
-    <div class="vid-grid">
-      <figure class="vid fi">
-        <video controls preload="none" playsinline poster="videos/christina-poster.jpg">
-          <source src="videos/christina.mp4" type="video/mp4">
-        </video>
-        <figcaption>
-          <span class="vid-name">Christina</span>
-          <span class="vid-role">In her own words</span>
-        </figcaption>
-      </figure>
-      <figure class="vid fi">
-        <video controls preload="none" playsinline poster="videos/clara-poster.jpg">
-          <source src="videos/clara.mp4" type="video/mp4">
-        </video>
-        <figcaption>
-          <span class="vid-name">Clara</span>
-          <span class="vid-role">In her own words</span>
-        </figcaption>
-      </figure>
     </div>
     <div class="testi-grid">
       <div class="testi fi">
