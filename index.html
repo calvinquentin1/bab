@@ -402,9 +402,8 @@ a { color: inherit; text-decoration: none; }
 /* ── INLINE CALENDAR EMBED ── */
 #booking { scroll-margin-top: 76px; }
 #booking .book-card { margin-top: 28px; }
-.book-hdr { text-align: center; margin-bottom: 24px; }
+.book-hdr { text-align: center; margin-bottom: 20px; scroll-margin-top: 70px; }
 .cal-embed {
-  scroll-margin-top: 84px;
   max-width: 760px;
   margin: 0 auto;
   background: var(--white);
@@ -764,11 +763,12 @@ if (stickyBar && bookingSection) {
   }, { threshold: 0.05 }).observe(bookingSection);
 }
 
-// All CTAs scroll down to the calendar itself, not the top of the section
-const calEmbed = document.querySelector('.cal-embed');
+// All CTAs scroll to the booking headline, so "Pick Your Time Below" sits
+// right above the calendar when you land
+const bookHdr = document.querySelector('.book-hdr');
 document.querySelectorAll('.open-booking-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    const target = calEmbed || bookingSection;
+    const target = bookHdr || bookingSection;
     if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
