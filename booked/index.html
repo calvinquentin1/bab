@@ -1,0 +1,219 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Call Is Booked | Baddiee After Baby</title>
+<meta name="description" content="Your onboarding call is booked. Check your email for the confirmation and calendar invite.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1563682655396756');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1563682655396756&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+:root {
+  --black:    #111111;
+  --text:     #1c1c1c;
+  --gray:     #555555;
+  --gray-lt:  #8a8a8a;
+  --white:    #ffffff;
+  --off:      #f8f6f3;
+  --line:     #e9e5df;
+  --green:      #008000;
+  --green-mid:  #006A00;
+  --green-deep: #008000;
+  --font:     'Montserrat', system-ui, sans-serif;
+  --serif:    'Playfair Display', Georgia, serif;
+  --narrow:   760px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.narrow { max-width: var(--narrow); margin-inline: auto; padding-inline: clamp(20px, 5vw, 48px); }
+
+/* ── CONFIRMATION ── */
+#confirm {
+  text-align: center;
+  padding: clamp(40px, 6vw, 76px) 0 clamp(28px, 4vw, 40px);
+}
+.check {
+  width: 68px; height: 68px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  background: rgba(0,128,0,.09);
+  border: 2px solid var(--green);
+  display: flex; align-items: center; justify-content: center;
+}
+.check svg {
+  width: 30px; height: 30px;
+  stroke: var(--green); stroke-width: 3; fill: none;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.eyebrow {
+  display: block;
+  font-size: 11px; font-weight: 800;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--green-deep);
+  margin-bottom: 16px;
+}
+h1 {
+  font-size: clamp(30px, 5vw, 50px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--black);
+  line-height: 1.08;
+  letter-spacing: -.01em;
+  text-wrap: balance;
+  margin-bottom: 16px;
+}
+h1 em { font-style: normal; color: var(--green-deep); }
+.lead {
+  font-size: clamp(15px, 2vw, 17px);
+  color: var(--gray);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.lead strong { color: var(--black); font-weight: 700; }
+
+/* ── NEXT ── */
+#next { padding: 0 0 clamp(44px, 6vw, 72px); }
+.cards { max-width: 620px; margin: 0 auto; display: grid; gap: 14px; }
+.card {
+  display: flex; align-items: flex-start; gap: 16px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 20px 22px;
+  text-align: left;
+}
+.card-i {
+  flex-shrink: 0;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--green);
+  display: flex; align-items: center; justify-content: center;
+}
+.card-i svg { width: 15px; height: 15px; stroke: var(--white); stroke-width: 2.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.card-t {
+  font-size: 14px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: .02em;
+  color: var(--black); line-height: 1.4;
+  margin-bottom: 4px;
+}
+.card-d { font-size: 14px; color: var(--gray); line-height: 1.7; }
+
+.note {
+  max-width: 620px;
+  margin: 26px auto 0;
+  background: var(--off);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--green);
+  border-radius: 8px;
+  padding: 20px 24px;
+  text-align: left;
+}
+.note-t {
+  font-size: 12px; font-weight: 800;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--green-deep);
+  margin-bottom: 6px;
+}
+.note p { font-size: 14.5px; color: var(--gray); line-height: 1.75; }
+.note strong { color: var(--black); font-weight: 700; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--off);
+  border-top: 1px solid var(--line);
+  padding: 32px 0;
+  text-align: center;
+}
+.foot-brand { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--black); }
+.foot-tag {
+  font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--green-deep); font-weight: 700; margin-top: 4px;
+}
+.foot-disc {
+  font-size: 11px; color: var(--gray-lt);
+  max-width: 620px; margin: 16px auto 0; line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .card { padding: 18px; gap: 13px; }
+}
+</style>
+
+<!-- CONFIRMATION -->
+<section id="confirm">
+  <div class="narrow">
+    <div class="check">
+      <svg viewBox="0 0 24 24"><polyline points="4 12.5 9.5 18 20 6"/></svg>
+    </div>
+    <span class="eyebrow">Call Booked</span>
+    <h1>You're All Set. <em>Your Call Is Booked.</em></h1>
+    <p class="lead">Nice work. <strong>A confirmation and calendar invite are on their way to your inbox.</strong> Add it to your calendar so it does not slip past you.</p>
+  </div>
+</section>
+
+<!-- WHAT NOW -->
+<section id="next">
+  <div class="narrow">
+    <div class="cards">
+      <div class="card">
+        <span class="card-i"><svg viewBox="0 0 24 24"><path d="M3 6h18v14H3z"/><polyline points="3 7 12 14 21 7"/></svg></span>
+        <div>
+          <div class="card-t">Check Your Email</div>
+          <div class="card-d">Your confirmation and calendar invite are on the way. If you don't see them in a few minutes, check your spam or promotions folder.</div>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-i"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span>
+        <div>
+          <div class="card-t">Add It To Your Calendar</div>
+          <div class="card-d">Open the invite and accept it. Give yourself a few quiet minutes for the call so you can actually talk through where your body is right now.</div>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-i"><svg viewBox="0 0 24 24"><polyline points="4 12.5 9.5 18 20 6"/></svg></span>
+        <div>
+          <div class="card-t">Then You Start Training</div>
+          <div class="card-d">On the call you get your access details and your starting point. After that it's three live group workouts a week, from home or the gym.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      <div class="note-t">Need To Reschedule?</div>
+      <p>Life with a baby moves fast. <strong>Use the reschedule link in your confirmation email</strong> — no need to start over, and no hard feelings.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="narrow">
+    <div class="foot-brand">Baddiee After Baby</div>
+    <div class="foot-tag">Rebuild. Reconnect. Rise.</div>
+    <p class="foot-disc">Results may vary. Baddiee After Baby programs are not a substitute for medical advice. Always consult your healthcare provider before beginning any postpartum fitness or wellness program. © 2026 Baddiee After Baby by Larissa Mendes.</p>
+  </div>
+</footer>

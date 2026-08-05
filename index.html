@@ -57,11 +57,6 @@ a { color: inherit; text-decoration: none; }
 .wrap   { max-width: var(--wide);   margin-inline: auto; padding-inline: clamp(20px, 5vw, 48px); }
 .narrow { max-width: var(--narrow); margin-inline: auto; padding-inline: clamp(20px, 5vw, 48px); }
 
-/* ── FADE IN ── */
-.fi { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
-.fi.on { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .fi { opacity:1; transform:none; transition:none; } }
-
 /* ── BUTTONS ── */
 .btn {
   display: inline-flex;
@@ -467,30 +462,6 @@ body.modal-open { overflow: hidden; }
   .modal-box { max-height: 88dvh; border-radius: 8px; }
 }
 
-/* ── STICKY MOBILE CTA ── */
-#sticky-bar {
-  display: none;
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  z-index: 500;
-  background: var(--green);
-  box-shadow: 0 -2px 20px rgba(17,17,17,.25);
-  transform: translateY(0);
-  transition: transform .3s ease;
-}
-#sticky-bar.hidden { transform: translateY(100%); }
-#sticky-bar a {
-  display: flex; align-items: center; justify-content: center; gap: 10px;
-  width: 100%;
-  padding: 17px 20px;
-  font-family: var(--font);
-  font-size: 13px; font-weight: 800;
-  letter-spacing: .06em; text-transform: uppercase;
-  color: var(--white);
-  background: transparent; border: none; cursor: pointer;
-}
-#sticky-bar a:active { background: var(--green-mid); }
-
 /* ── MOBILE ── */
 @media (max-width: 767px) {
   :root { --py: clamp(48px, 10vw, 72px); }
@@ -517,7 +488,7 @@ body.modal-open { overflow: hidden; }
     <p class="hero-sub">Join live postpartum training 3 times a week with a specialist who has been exactly where you are. From your living room. No gym. No babysitter. No guesswork.</p>
     <a href="#" class="btn checkout-btn">Start Training This Week <span class="btn-price">$50/mo</span> <span class="arr">→</span></a>
     <p class="hero-trust"><strong>Roughly $4 per live session with a postpartum specialist.</strong> Month to month. Cancel anytime.</p>
-    <div class="hero-ba fi on">
+    <div class="hero-ba">
       <span class="ba-lbl">My Transformation Using The Baddiee After Baby Method</span>
       <div class="ba-grid">
         <div class="ba-item">
@@ -536,18 +507,18 @@ body.modal-open { overflow: hidden; }
 <!-- THIS IS FOR YOU -->
 <section class="sec" id="for-you">
   <div class="narrow">
-    <div class="sec-hdr fi">
+    <div class="sec-hdr">
       <span class="eyebrow" style="display:block; text-align:center;">Is This For You?</span>
       <h2 class="sec-h">This Is <em>For You</em> If…</h2>
     </div>
-    <div class="pains fi">
+    <div class="pains">
       <div class="pain"><span class="pain-check"><svg viewBox="0 0 14 14"><polyline points="2 7.5 5.5 11 12 3"/></svg></span><span class="pain-t">You had a baby and feel like a stranger in your own body</span></div>
       <div class="pain"><span class="pain-check"><svg viewBox="0 0 14 14"><polyline points="2 7.5 5.5 11 12 3"/></svg></span><span class="pain-t">You have tried programs that were not built for postpartum recovery</span></div>
       <div class="pain"><span class="pain-check"><svg viewBox="0 0 14 14"><polyline points="2 7.5 5.5 11 12 3"/></svg></span><span class="pain-t">You want to feel strong, confident, and like a baddie again</span></div>
       <div class="pain"><span class="pain-check"><svg viewBox="0 0 14 14"><polyline points="2 7.5 5.5 11 12 3"/></svg></span><span class="pain-t">You are tired of doing it alone with no accountability</span></div>
       <div class="pain"><span class="pain-check"><svg viewBox="0 0 14 14"><polyline points="2 7.5 5.5 11 12 3"/></svg></span><span class="pain-t">You are ready to show up three times a week and actually see results</span></div>
     </div>
-    <div class="empathy fi">
+    <div class="empathy">
       <p><strong>If any of this sounds like you, you are in the right place.</strong> Every postpartum body is different. The hormones, the core damage, the identity shift, the exhaustion. Generic fitness programs were never designed for what you have been through. This program was.</p>
       <p>Most programs give you a PDF and wish you luck. <strong>This one shows up with you, live, three times a week</strong> — and does not stop until you feel like yourself again.</p>
       <a href="#" class="btn checkout-btn">Start Training This Week <span class="btn-price">$50/mo</span> <span class="arr">→</span></a>
@@ -558,11 +529,11 @@ body.modal-open { overflow: hidden; }
 <!-- VIDEO TESTIMONIALS -->
 <section class="sec sec-off" id="stories">
   <div class="wrap">
-    <div class="sec-hdr fi" style="margin-bottom:clamp(28px, 4vw, 40px);">
+    <div class="sec-hdr" style="margin-bottom:clamp(28px, 4vw, 40px);">
       <span class="eyebrow" style="display:block; text-align:center;">In Their Own Words</span>
     </div>
     <div class="vid-grid">
-      <figure class="vid fi">
+      <figure class="vid">
         <video controls preload="none" playsinline poster="videos/christina-poster.jpg">
           <source src="videos/christina.mp4" type="video/mp4">
         </video>
@@ -571,7 +542,7 @@ body.modal-open { overflow: hidden; }
           <span class="vid-role">In her own words</span>
         </figcaption>
       </figure>
-      <figure class="vid fi">
+      <figure class="vid">
         <video controls preload="none" playsinline poster="videos/clara-poster.jpg">
           <source src="videos/clara.mp4" type="video/mp4">
         </video>
@@ -587,12 +558,12 @@ body.modal-open { overflow: hidden; }
 <!-- WHAT'S INCLUDED -->
 <section class="sec" id="included">
   <div class="wrap">
-    <div class="sec-hdr fi">
+    <div class="sec-hdr">
       <span class="eyebrow" style="display:block; text-align:center;">What Is Included</span>
       <h2 class="sec-h">One Simple Thing. <em>Show Up and Train.</em></h2>
     </div>
     <div class="incl">
-      <div class="incl-item incl-solo fi">
+      <div class="incl-item incl-solo">
         <div>
           <div class="incl-t">3x Weekly Live Group Workouts</div>
           <div class="incl-d">Three times a week, Larissa leads a live group workout built specifically for postpartum bodies. Log on from anywhere, follow along in real time, and get the coaching, cues, and accountability that no app or PDF can give you.</div>
@@ -601,7 +572,7 @@ body.modal-open { overflow: hidden; }
       </div>
     </div>
     <div class="center" style="margin-top:30px;">
-      <a href="#" class="btn checkout-btn fi">Start Training This Week <span class="btn-price">$50/mo</span> <span class="arr">→</span></a>
+      <a href="#" class="btn checkout-btn">Start Training This Week <span class="btn-price">$50/mo</span> <span class="arr">→</span></a>
     </div>
   </div>
 </section>
@@ -609,7 +580,7 @@ body.modal-open { overflow: hidden; }
 <!-- ABOUT -->
 <section class="sec sec-off" id="about">
   <div class="narrow">
-    <div class="fi">
+    <div>
       <span class="eyebrow" style="display:block; text-align:center;">About Larissa</span>
       <h2 class="sec-h" style="margin-bottom:32px;">Rebuilt From <em>The Inside Out</em></h2>
       <div class="about-photo">
@@ -628,12 +599,12 @@ body.modal-open { overflow: hidden; }
 <!-- TESTIMONIALS -->
 <section class="sec" id="testimonials">
   <div class="wrap">
-    <div class="sec-hdr fi">
+    <div class="sec-hdr">
       <span class="eyebrow" style="display:block; text-align:center;">What Mothers Are Saying</span>
       <h2 class="sec-h">Real Women. <em>Real Results.</em></h2>
     </div>
     <div class="testi-grid">
-      <div class="testi fi">
+      <div class="testi">
         <div class="stars">
           <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
           <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -645,7 +616,7 @@ body.modal-open { overflow: hidden; }
         <div class="testi-name">Sarah M.</div>
         <div class="testi-role">Mom of 2, 4 months postpartum</div>
       </div>
-      <div class="testi fi">
+      <div class="testi">
         <div class="stars">
           <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
           <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -657,7 +628,7 @@ body.modal-open { overflow: hidden; }
         <div class="testi-name">Priya K.</div>
         <div class="testi-role">First-time mom, 5 months postpartum</div>
       </div>
-      <div class="testi fi">
+      <div class="testi">
         <div class="stars">
           <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
           <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -676,7 +647,7 @@ body.modal-open { overflow: hidden; }
 <!-- FINAL CTA -->
 <section id="final">
   <div class="narrow">
-    <div class="fi">
+    <div>
       <span class="eyebrow" style="color:var(--green);">Your Transformation Starts Here</span>
       <h2 class="final-hl">You Have Been <em>Waiting Long Enough.</em></h2>
       <p class="final-sub">Your first live workout is this week. All you have to do is show up.</p>
@@ -690,11 +661,11 @@ body.modal-open { overflow: hidden; }
 <!-- READY TO START -->
 <section class="sec" id="booking">
   <div class="narrow">
-    <div class="sec-hdr fi">
+    <div class="sec-hdr">
       <span class="eyebrow" style="display:block; text-align:center;">Ready To Start</span>
       <h2 class="sec-h">Your Next Workout <em>Is This Week</em></h2>
     </div>
-    <div class="book-card fi">
+    <div class="book-card">
       <span class="book-tag">$50 / Month · Month To Month · Cancel Anytime</span>
       <div class="perks">
         <div class="perk"><span class="perk-dot"></span><span>Live sessions led by a postpartum specialist</span></div>
@@ -708,11 +679,6 @@ body.modal-open { overflow: hidden; }
     <p class="form-note">Results may vary. Baddiee After Baby programs are not a substitute for medical advice.</p>
   </div>
 </section>
-
-<!-- STICKY MOBILE CTA BAR -->
-<div id="sticky-bar">
-  <a href="#" class="checkout-btn">Start Training This Week <span class="btn-price">$50/mo</span> <span class="arr">→</span></a>
-</div>
 
 <!-- CHECKOUT MODAL -->
 <div class="modal-overlay" id="checkout-modal" inert aria-hidden="true">
@@ -738,28 +704,6 @@ body.modal-open { overflow: hidden; }
 </footer>
 
 <script>
-// Fade-in observer
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    const siblings = [...e.target.parentElement.querySelectorAll('.fi')];
-    const i = siblings.indexOf(e.target);
-    e.target.style.transitionDelay = (i * 70) + 'ms';
-    e.target.classList.add('on');
-    obs.unobserve(e.target);
-  });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fi').forEach(el => obs.observe(el));
-
-// Sticky bar: hide when booking section is visible
-const stickyBar = document.getElementById('sticky-bar');
-const bookingSection = document.getElementById('booking');
-if (stickyBar && bookingSection) {
-  new IntersectionObserver(([e]) => {
-    stickyBar.classList.toggle('hidden', e.isIntersecting);
-  }, { threshold: 0.05 }).observe(bookingSection);
-}
-
 // Every CTA opens the checkout survey in a modal
 const checkoutModal = document.getElementById('checkout-modal');
 const checkoutClose = document.getElementById('checkout-modal-close');
